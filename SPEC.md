@@ -7,7 +7,7 @@
 - Official prompt: DL Industrial Systems — **3D Printing for Aerospace** (the website gives no number).
 - Prompt source: https://six-sigma-hackathon.devpost.com/ (retrieved 2026-10-20 UTC).
 - Prompt summary: a contractor prints titanium brackets that fail strength tests; define environmental and stress-related records, monitor process capability, flag issues, and support investigation.
-- Public repository and live course URL: pending account access; do not fabricate either.
+- Public repository: https://github.com/yl4499-beep/TitaniumGuard (published 2026-10-21). Live course URL remains pending deployment.
 
 ## 2. User and decision
 A contractor's quality engineer reviews destructive tensile-test coupons from each print build. The tool distinguishes an unusual process shift from a stable process with inadequate strength margin and provides build records to investigate. Coupons are proxies for process strength, not proof of every bracket's fitness for flight.

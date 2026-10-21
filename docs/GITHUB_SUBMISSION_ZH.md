@@ -9,7 +9,7 @@
 - https://github.com/timothyfraser/sixsigmahackathon/blob/main/docs/criteria.md
 - https://github.com/timothyfraser/sixsigmahackathon/blob/main/.claude/skills/superagent/SKILL.md
 
-当前交付的是源代码文件包，尚未建立你的公开 GitHub 仓库，也没有你的 Git commit 历史。检查报告、测试文件、任务清单是已有的工作证据；它们不能替代 GitHub 上实际发生的提交记录。
+2026-10-21 已公开完整源代码：https://github.com/yl4499-beep/TitaniumGuard。真实提交 00622df 上传了已审核的原型、数据、测试和部署配置；首次 GitHub 自动检查运行 39548738151 已通过。部署运行停在缺少课程 secrets 的检查，尚未上线，也尚未提交 Devpost。历史审计报告保留检查当时的状态。
 
 ## 建议保留什么
 
@@ -26,7 +26,7 @@
 1. 下载并解压 TitaniumGuard_Project.zip，检查 README 和三个示例。
 2. 在你或团队的 GitHub 账户下创建公开仓库，将解压后的 TitaniumGuard 目录作为项目根目录。GitHub Desktop 或命令行都可以。
 3. 确认 GitHub 仓库根目录能看到 README.md、app/、data/、demo/、docs/、tests/、SPEC.md 和 CONTRACT.yaml。
-4. `.github/workflows/checks.yml` 会在未来的 push/PR 上运行统计/API 测试和部署文件检查。这些 GitHub Actions 尚未实际执行，首次上传后应查看结果。
+4. `.github/workflows/checks.yml` 会在未来的 push/PR 上运行统计/API 测试和部署文件检查。首次运行已通过；后续提交继续查看对应运行结果。
 5. 如果采用自动部署，在仓库设置中配置课程发给你的 CONNECT_SERVER 和 CONNECT_API_KEY secrets；部署流程使用课程官方模板。没有这两个配置时，部署工作流会报缺少配置，属于尚未部署。
 6. 发布后在未登录浏览器检查应用主页、三个示例、CSV 导入和 `/docs`，把真实地址填写到 README 与 Devpost。
 7. 审核 docs/DEVPOST_DRAFT.md，替换团队审核情况和链接占位内容，在截止时间前正式提交。

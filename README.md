@@ -78,13 +78,13 @@ The core has71 numerical and validation tests; expanded API integration checks c
 [App README](app/README.md) provides request examples and launch details.
 
 ## Deploy and submit — account steps still required
-**Local testing is complete separately from publication. No public repository, course deployment or Devpost submission is claimed.**
-1. Review the code and create your own public GitHub repository; enter the actual team name and members. Do not publish to the event organizer's repository.
+**Public repository: [https://github.com/yl4499-beep/TitaniumGuard](https://github.com/yl4499-beep/TitaniumGuard). Source published on 2026-10-21. Course deployment and Devpost submission remain pending.**
+1. Review the published code and enter the actual team name and members. Do not publish to the event organizer's repository.
 2. Use the course Posit Connect publisher access. With CONNECT_SERVER and CONNECT_API_KEY set in your local environment, run `bash app/manifestme.sh` and then `bash app/deployme.sh`. Never place the key in a submitted document or public repository.
 3. Verify the resulting app from a signed-out browser, rerun the three demonstrations, and place the real URL in this README and Devpost.
 4. Use [DEVPOST_DRAFT](docs/DEVPOST_DRAFT.md) and [PITCH](docs/PITCH.md), recording a demonstration if the actual submission form requires one. Submit before the DL deadline shown by the organizer; published written schedule says Oct23,2026,3PM Eastern. The event-status banner may differ; verify the submission form with the organizer.
 
-The optional `.github/workflows/checks.yml` runs tests and release-file checks on future GitHub pushes and pull requests. The official deployment workflow is configured for `app/` and `/health`; it needs the two course repository secrets before it can succeed. These workflows have not run on GitHub yet.
+The optional `.github/workflows/checks.yml` runs tests and release-file checks on future GitHub pushes and pull requests. The official deployment workflow is configured for `app/` and `/health`; it needs the two course repository secrets before it can succeed. The first GitHub verification run passed (run 39548738151, source commit 00622df). The deployment run passed its import smoke test but stopped at the missing repository-secrets check; no live deployment is claimed.
 
 The publisher script targets the course Posit Connect server, not Connect Cloud. Interpreter compatibility must be confirmed with that server. No credential or deployment access is included in this package.
 

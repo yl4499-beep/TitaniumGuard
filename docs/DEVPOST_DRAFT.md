@@ -37,6 +37,6 @@ Python, FastAPI, JavaScript, HTML, CSS, pytest; intended deployment on course Po
 ChatGPT/Codex assisted with design, code, synthetic datasets, tests and documentation, as encouraged by the event. Sources and executed verification are included. The team reviewed [replace this bracketed statement with the review actually performed].
 
 ## Links to enter
-- Actual public GitHub repository: pending publication.
+- Actual public GitHub repository: https://github.com/yl4499-beep/TitaniumGuard
 - Actual live Posit Connect application: pending deployment and public-access verification.
 - Demonstration video: record the provided walkthrough if the submission form requests a video; no recording has been fabricated.
