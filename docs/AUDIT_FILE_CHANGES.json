@@ -1,0 +1,82 @@
+{
+  "audit_date": "2026-10-20",
+  "note": "File checksums around the local audit, not Git commits. No public repository exists yet.",
+  "added": {
+    "tests/test_input_contract.py": "a7e260db0c1255965dc696e2835fee33562778c7a56ac299ce97dfb3cae254fc",
+    "tests/browser_smoke.py": "d436caff6d607eeef6a10c1de28b50194d0639e16b0c67f1db454000f2ac8c97",
+    "tests/check_release.py": "d583a3b98e612302188ec92d62eaff6b0e0f19fd73621d5adff4d470ec391a32",
+    "docs/AUDIT_REPORT_ZH.md": "9611844614820179eb009ff4a55ee4499425ae573318fe081e38a86de51514bd",
+    "docs/GITHUB_SUBMISSION_ZH.md": "3ad08f88c09af173bf39bb9104b982e09cdcd4ba48173b00e377e4e8063f2966",
+    ".github/workflows/checks.yml": "529b5d4a1c74683831c42b7e314f28dd029bb85db86e9370a4a0c857afcc633c",
+    ".github/workflows/deploy-fastapi.yml": "73ab182378c65123f4fccaf2ef4d76e9ab11f4f754270a3dc0ce9ee27bd45189",
+    ".github/scripts/connect-publish-async.sh": "03a9c2512a3301f527dabde49a4462d824526cd35eb3535b44ca2b27b07e46cf",
+    "app/static/vendor/swagger-ui-bundle.js": "c2e4a9ef08144839ff47c14202063ecfe4e59e70a4e7154a26bd50d880c88ba1",
+    "app/static/vendor/LICENSE": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+    "app/static/vendor/swagger-ui.css": "40170f0ee859d17f92131ba707329a88a070e4f66874d11365e9a77d232f6117",
+    "app/static/vendor/README.md": "2e7c9c7585be2b9e989af0e77257a7cbf651c21ef12f2b6a445080ecbdcdcb5b",
+    "app/static/vendor/NOTICE": "0d20d1adef18aee3f40dd258172155521ce702ac445cb5f7b7d60ed32dad2fb2"
+  },
+  "changed": {
+    "CONTRACT.yaml": {
+      "before_sha256": "2355473a86615400a9ca00c65e20b4b8d4440515d97d503376613b2ee9c370ff",
+      "after_sha256": "4b36573020046e1867d0fb515fba41b9511f2eb31e0f0d3dfd4cbf5651dc0b8a"
+    },
+    "README.md": {
+      "before_sha256": "1162344267e5aadeb7d6410c6f6d27baf1f5e23fcff148daa020d10e4471aca7",
+      "after_sha256": "1efc41bad887386ae9dd9b7d14edc60fa05ccbc1c9137fcc3b15d43ce1b9c189"
+    },
+    "SPEC.md": {
+      "before_sha256": "9e5171d973016296041ecf217b5c895935e00457872fc0e780bdf43706e3e180",
+      "after_sha256": "bbbfd057aa411df735566992d375dbaf2a133250e05a12745015bba5163b316f"
+    },
+    "docs/SOURCES.md": {
+      "before_sha256": "36a11d1282b7570d047506e84dd0b1d0f8878f9dd44b5b8a67579da1c7287c9d",
+      "after_sha256": "ede25d1a30624bc685a8545250d80efb2efe9e9a01e1fb25eba78381d69bb0ed"
+    },
+    "data/README.md": {
+      "before_sha256": "556226936249d4268cd8a66f1ff78e2e2b390c6f1124bf34466bbc60415cab53",
+      "after_sha256": "302c0a571bea198b1f79b365113149c614e8e148bb93fe36763122771c426bc6"
+    },
+    "app/qc.py": {
+      "before_sha256": "7b4c77042145c35cf21fc77586258f4c6599a06811af106d91f42f76996fbe12",
+      "after_sha256": "7f3bdd31f32625994067670e284c76ac2c53284f93d9d58d99294533814dec11"
+    },
+    "app/manifestme.sh": {
+      "before_sha256": "082401f116368c5eb0e5fc42db118186b39659370ca1a27d23d0e23ea4942e33",
+      "after_sha256": "3b34e2d9143c3df9524bc9268a4b4a50c6302d07126ef68da7a411a296636f95"
+    },
+    "app/README.md": {
+      "before_sha256": "53e6a14b9b268bbb65c1fac7042fc1e238064e80315ec461d0da6b170e00d91b",
+      "after_sha256": "98b110918b63d481f6e769a9467c905887a957394c1ae6e269fe1fdd15273ada"
+    },
+    "app/manifest.json": {
+      "before_sha256": "89e223e1e3d6bc1fc6f7e52a22afe0857af3e1bcb66db7bb2dfcf9cd03802192",
+      "after_sha256": "87503167bf1f00fa8740d6c08517fd0405e57fcb885c5b54e1f5a9046063b9bc"
+    },
+    "app/test_api.py": {
+      "before_sha256": "28aeeaa2a11a873064753df4a1e9e5c32e84901e2969c262a491b581e189a1df",
+      "after_sha256": "e1c30004c226e182f90bba9793450b5fae4c5e26fae115d92e0f9525112e21c7"
+    },
+    "app/server.py": {
+      "before_sha256": "78808e3b0f7a8556ad472696f6f035725c0d99fca56f32347e1a757a163f8a0c",
+      "after_sha256": "eab46fa27ea4a6c1917efdbfa9fd7ac41d436e051de5647d2fdff6f9cb6c10a1"
+    },
+    "app/deployme.sh": {
+      "before_sha256": "aeed5085cb63f5286d39fb7035be8e99770971c5dad08bd1c26be48f8bc6ca48",
+      "after_sha256": "dcf1010c272db214659b1d18b87921bfbe15202c406f60c89d70feb4723a6dc2"
+    },
+    "demo/STATISTICS_REVIEW.md": {
+      "before_sha256": "74da400b2eabf0f7cb1b0ebaac092a3abbaac19369d303182780b01e7c3334c9",
+      "after_sha256": "9880ed7e7388b7a907db2b1032c65aed02e32de292209273055cf55f60e4472b"
+    },
+    "app/static/index.html": {
+      "before_sha256": "60fc7a622afc9555fefc438c2216f6dd51961666ca2ebd35d66008d393d96e77",
+      "after_sha256": "350c99060c3f225023cf5310e8a9db7e5525d72fac5f34eb326f378a865fe46e"
+    },
+    "app/static/app.js": {
+      "before_sha256": "f09f261e1fdc83ba5165badebee5fe92ab136c8fb4cc1dee5c8d9104127ead5d",
+      "after_sha256": "c0b6784502ad339756829c40ca3edbe80e9fb5b93d3ce210c842527f36f0f6a1"
+    }
+  },
+  "removed": []
+}

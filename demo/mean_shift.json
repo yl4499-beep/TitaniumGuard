@@ -1,0 +1,2201 @@
+{
+  "metadata": {
+    "n_records": 200,
+    "n_builds": 40,
+    "subgroup_size": 5,
+    "baseline_builds": 25,
+    "monitoring_builds": 15,
+    "lsl": 900.0,
+    "usl": null,
+    "target": 1.33,
+    "units": "MPa",
+    "index_name": "Cpl",
+    "specification": "lower-only",
+    "signal_rules": [
+      "one point beyond 3-sigma X-bar or R limits",
+      "eight consecutive X-bar means strictly on one side"
+    ],
+    "constants": {
+      "A2": 0.577,
+      "D3": 0.0,
+      "D4": 2.115,
+      "d2": 2.326
+    }
+  },
+  "baseline": {
+    "mean": 1001.91912,
+    "rbar": 35.17119999999999,
+    "sigma_within": 15.12089423903697,
+    "sd_overall": 13.899620035187315,
+    "n_builds": 25,
+    "n_records": 125,
+    "capability": {
+      "Cpl": 2.246761300154673,
+      "Cpu": null,
+      "Cp": null,
+      "Cpk": null
+    },
+    "performance": {
+      "Ppl": 2.4441704099821586,
+      "Ppu": null,
+      "Pp": null,
+      "Ppk": null
+    },
+    "signal_count": 0,
+    "index_name": "Cpl",
+    "index_value": 2.246761300154673,
+    "interpretation": "Historical baseline estimate"
+  },
+  "limits": {
+    "xbar": {
+      "lcl": 981.6253376000001,
+      "cl": 1001.91912,
+      "ucl": 1022.2129024
+    },
+    "range": {
+      "lcl": 0.0,
+      "cl": 35.17119999999999,
+      "ucl": 74.38708799999999
+    }
+  },
+  "groups": [
+    {
+      "id": "B001",
+      "time": "2026-09-01T08:00:00",
+      "values": [
+        1010.53,
+        998.09,
+        977.54,
+        1004.98,
+        995.99
+      ],
+      "specimen_ids": [
+        "B001-C1",
+        "B001-C2",
+        "B001-C3",
+        "B001-C4",
+        "B001-C5"
+      ],
+      "context": {
+        "machine_id": "LPBF-01",
+        "powder_lot": "POWDER-A",
+        "oxygen_ppm": 63.8,
+        "laser_power_w": 279.7,
+        "scan_speed_mm_s": 998.7,
+        "heat_treatment": "HT-A",
+        "notes": "Synthetic demonstration; no production data"
+      },
+      "mean": 997.426,
+      "range": 32.99000000000001,
+      "phase": "baseline",
+      "signals": [],
+      "out_of_control": false,
+      "observed": {
+        "n": 5,
+        "below_lsl": 0,
+        "above_usl": 0,
+        "nonconforming": 0,
+        "fraction": 0.0
+      }
+    },
+    {
+      "id": "B002",
+      "time": "2026-09-01T20:00:00",
+      "values": [
+        1017.45,
+        1009.85,
+        1001.66,
+        988.93,
+        984.78
+      ],
+      "specimen_ids": [
+        "B002-C1",
+        "B002-C2",
+        "B002-C3",
+        "B002-C4",
+        "B002-C5"
+      ],
+      "context": {
+        "machine_id": "LPBF-01",
+        "powder_lot": "POWDER-A",
+        "oxygen_ppm": 63.3,
+        "laser_power_w": 280.2,
+        "scan_speed_mm_s": 1002.8,
+        "heat_treatment": "HT-A",
+        "notes": "Synthetic demonstration; no production data"
+      },
+      "mean": 1000.534,
+      "range": 32.67000000000007,
+      "phase": "baseline",
+      "signals": [],
+      "out_of_control": false,
+      "observed": {
+        "n": 5,
+        "below_lsl": 0,
+        "above_usl": 0,
+        "nonconforming": 0,
+        "fraction": 0.0
+      }
+    },
+    {
+      "id": "B003",
+      "time": "2026-09-02T08:00:00",
+      "values": [
+        998.41,
+        1007.98,
+        978.2,
+        995.32,
+        1007.36
+      ],
+      "specimen_ids": [
+        "B003-C1",
+        "B003-C2",
+        "B003-C3",
+        "B003-C4",
+        "B003-C5"
+      ],
+      "context": {
+        "machine_id": "LPBF-01",
+        "powder_lot": "POWDER-A",
+        "oxygen_ppm": 67.0,
+        "laser_power_w": 282.6,
+        "scan_speed_mm_s": 1000.5,
+        "heat_treatment": "HT-A",
+        "notes": "Synthetic demonstration; no production data"
+      },
+      "mean": 997.4540000000001,
+      "range": 29.779999999999973,
+      "phase": "baseline",
+      "signals": [],
+      "out_of_control": false,
+      "observed": {
+        "n": 5,
+        "below_lsl": 0,
+        "above_usl": 0,
+        "nonconforming": 0,
+        "fraction": 0.0
+      }
+    },
+    {
+      "id": "B004",
+      "time": "2026-09-02T20:00:00",
+      "values": [
+        1003.72,
+        1011.73,
+        983.3,
+        1008.52,
+        977.28
+      ],
+      "specimen_ids": [
+        "B004-C1",
+        "B004-C2",
+        "B004-C3",
+        "B004-C4",
+        "B004-C5"
+      ],
+      "context": {
+        "machine_id": "LPBF-01",
+        "powder_lot": "POWDER-A",
+        "oxygen_ppm": 72.0,
+        "laser_power_w": 279.5,
+        "scan_speed_mm_s": 1004.5,
+        "heat_treatment": "HT-A",
+        "notes": "Synthetic demonstration; no production data"
+      },
+      "mean": 996.91,
+      "range": 34.450000000000045,
+      "phase": "baseline",
+      "signals": [],
+      "out_of_control": false,
+      "observed": {
+        "n": 5,
+        "below_lsl": 0,
+        "above_usl": 0,
+        "nonconforming": 0,
+        "fraction": 0.0
+      }
+    },
+    {
+      "id": "B005",
+      "time": "2026-09-03T08:00:00",
+      "values": [
+        1013.14,
+        1009.96,
+        981.71,
+        1012.71,
+        984.97
+      ],
+      "specimen_ids": [
+        "B005-C1",
+        "B005-C2",
+        "B005-C3",
+        "B005-C4",
+        "B005-C5"
+      ],
+      "context": {
+        "machine_id": "LPBF-01",
+        "powder_lot": "POWDER-A",
+        "oxygen_ppm": 44.0,
+        "laser_power_w": 278.8,
+        "scan_speed_mm_s": 989.0,
+        "heat_treatment": "HT-A",
+        "notes": "Synthetic demonstration; no production data"
+      },
+      "mean": 1000.498,
+      "range": 31.42999999999995,
+      "phase": "baseline",
+      "signals": [],
+      "out_of_control": false,
+      "observed": {
+        "n": 5,
+        "below_lsl": 0,
+        "above_usl": 0,
+        "nonconforming": 0,
+        "fraction": 0.0
+      }
+    },
+    {
+      "id": "B006",
+      "time": "2026-09-03T20:00:00",
+      "values": [
+        1012.28,
+        1009.58,
+        1005.25,
+        1009.75,
+        1007.18
+      ],
+      "specimen_ids": [
+        "B006-C1",
+        "B006-C2",
+        "B006-C3",
+        "B006-C4",
+        "B006-C5"
+      ],
+      "context": {
+        "machine_id": "LPBF-01",
+        "powder_lot": "POWDER-A",
+        "oxygen_ppm": 64.3,
+        "laser_power_w": 279.4,
+        "scan_speed_mm_s": 1001.4,
+        "heat_treatment": "HT-A",
+        "notes": "Synthetic demonstration; no production data"
+      },
+      "mean": 1008.808,
+      "range": 7.029999999999973,
+      "phase": "baseline",
+      "signals": [],
+      "out_of_control": false,
+      "observed": {
+        "n": 5,
+        "below_lsl": 0,
+        "above_usl": 0,
+        "nonconforming": 0,
+        "fraction": 0.0
+      }
+    },
+    {
+      "id": "B007",
+      "time": "2026-09-04T08:00:00",
+      "values": [
+        1007.49,
+        996.25,
+        1035.04,
+        987.71,
+        983.52
+      ],
+      "specimen_ids": [
+        "B007-C1",
+        "B007-C2",
+        "B007-C3",
+        "B007-C4",
+        "B007-C5"
+      ],
+      "context": {
+        "machine_id": "LPBF-01",
+        "powder_lot": "POWDER-A",
+        "oxygen_ppm": 60.0,
+        "laser_power_w": 278.6,
+        "scan_speed_mm_s": 994.4,
+        "heat_treatment": "HT-A",
+        "notes": "Synthetic demonstration; no production data"
+      },
+      "mean": 1002.002,
+      "range": 51.51999999999998,
+      "phase": "baseline",
+      "signals": [],
+      "out_of_control": false,
+      "observed": {
+        "n": 5,
+        "below_lsl": 0,
+        "above_usl": 0,
+        "nonconforming": 0,
+        "fraction": 0.0
+      }
+    },
+    {
+      "id": "B008",
+      "time": "2026-09-04T20:00:00",
+      "values": [
+        1012.54,
+        1021.4,
+        998.59,
+        978.66,
+        992.02
+      ],
+      "specimen_ids": [
+        "B008-C1",
+        "B008-C2",
+        "B008-C3",
+        "B008-C4",
+        "B008-C5"
+      ],
+      "context": {
+        "machine_id": "LPBF-01",
+        "powder_lot": "POWDER-A",
+        "oxygen_ppm": 71.1,
+        "laser_power_w": 282.8,
+        "scan_speed_mm_s": 1006.1,
+        "heat_treatment": "HT-A",
+        "notes": "Synthetic demonstration; no production data"
+      },
+      "mean": 1000.6419999999999,
+      "range": 42.74000000000001,
+      "phase": "baseline",
+      "signals": [],
+      "out_of_control": false,
+      "observed": {
+        "n": 5,
+        "below_lsl": 0,
+        "above_usl": 0,
+        "nonconforming": 0,
+        "fraction": 0.0
+      }
+    },
+    {
+      "id": "B009",
+      "time": "2026-09-05T08:00:00",
+      "values": [
+        1003.8,
+        995.27,
+        1010.85,
+        1008.71,
+        1034.82
+      ],
+      "specimen_ids": [
+        "B009-C1",
+        "B009-C2",
+        "B009-C3",
+        "B009-C4",
+        "B009-C5"
+      ],
+      "context": {
+        "machine_id": "LPBF-01",
+        "powder_lot": "POWDER-A",
+        "oxygen_ppm": 72.6,
+        "laser_power_w": 277.1,
+        "scan_speed_mm_s": 1000.4,
+        "heat_treatment": "HT-A",
+        "notes": "Synthetic demonstration; no production data"
+      },
+      "mean": 1010.6899999999999,
+      "range": 39.549999999999955,
+      "phase": "baseline",
+      "signals": [],
+      "out_of_control": false,
+      "observed": {
+        "n": 5,
+        "below_lsl": 0,
+        "above_usl": 0,
+        "nonconforming": 0,
+        "fraction": 0.0
+      }
+    },
+    {
+      "id": "B010",
+      "time": "2026-09-05T20:00:00",
+      "values": [
+        987.53,
+        1014.28,
+        991.5,
+        998.95,
+        1011.24
+      ],
+      "specimen_ids": [
+        "B010-C1",
+        "B010-C2",
+        "B010-C3",
+        "B010-C4",
+        "B010-C5"
+      ],
+      "context": {
+        "machine_id": "LPBF-01",
+        "powder_lot": "POWDER-A",
+        "oxygen_ppm": 70.0,
+        "laser_power_w": 278.8,
+        "scan_speed_mm_s": 993.3,
+        "heat_treatment": "HT-A",
+        "notes": "Synthetic demonstration; no production data"
+      },
+      "mean": 1000.7,
+      "range": 26.75,
+      "phase": "baseline",
+      "signals": [],
+      "out_of_control": false,
+      "observed": {
+        "n": 5,
+        "below_lsl": 0,
+        "above_usl": 0,
+        "nonconforming": 0,
+        "fraction": 0.0
+      }
+    },
+    {
+      "id": "B011",
+      "time": "2026-09-06T08:00:00",
+      "values": [
+        983.76,
+        991.48,
+        1006.24,
+        1017.9,
+        999.72
+      ],
+      "specimen_ids": [
+        "B011-C1",
+        "B011-C2",
+        "B011-C3",
+        "B011-C4",
+        "B011-C5"
+      ],
+      "context": {
+        "machine_id": "LPBF-01",
+        "powder_lot": "POWDER-A",
+        "oxygen_ppm": 59.2,
+        "laser_power_w": 279.4,
+        "scan_speed_mm_s": 977.9,
+        "heat_treatment": "HT-A",
+        "notes": "Synthetic demonstration; no production data"
+      },
+      "mean": 999.82,
+      "range": 34.139999999999986,
+      "phase": "baseline",
+      "signals": [],
+      "out_of_control": false,
+      "observed": {
+        "n": 5,
+        "below_lsl": 0,
+        "above_usl": 0,
+        "nonconforming": 0,
+        "fraction": 0.0
+      }
+    },
+    {
+      "id": "B012",
+      "time": "2026-09-06T20:00:00",
+      "values": [
+        1013.4,
+        1004.11,
+        984.84,
+        1013.55,
+        1005.72
+      ],
+      "specimen_ids": [
+        "B012-C1",
+        "B012-C2",
+        "B012-C3",
+        "B012-C4",
+        "B012-C5"
+      ],
+      "context": {
+        "machine_id": "LPBF-01",
+        "powder_lot": "POWDER-A",
+        "oxygen_ppm": 67.1,
+        "laser_power_w": 280.3,
+        "scan_speed_mm_s": 1013.0,
+        "heat_treatment": "HT-A",
+        "notes": "Synthetic demonstration; no production data"
+      },
+      "mean": 1004.324,
+      "range": 28.709999999999923,
+      "phase": "baseline",
+      "signals": [],
+      "out_of_control": false,
+      "observed": {
+        "n": 5,
+        "below_lsl": 0,
+        "above_usl": 0,
+        "nonconforming": 0,
+        "fraction": 0.0
+      }
+    },
+    {
+      "id": "B013",
+      "time": "2026-09-07T08:00:00",
+      "values": [
+        994.62,
+        1023.9,
+        1001.73,
+        992.26,
+        983.07
+      ],
+      "specimen_ids": [
+        "B013-C1",
+        "B013-C2",
+        "B013-C3",
+        "B013-C4",
+        "B013-C5"
+      ],
+      "context": {
+        "machine_id": "LPBF-01",
+        "powder_lot": "POWDER-A",
+        "oxygen_ppm": 74.8,
+        "laser_power_w": 279.9,
+        "scan_speed_mm_s": 1023.4,
+        "heat_treatment": "HT-A",
+        "notes": "Synthetic demonstration; no production data"
+      },
+      "mean": 999.116,
+      "range": 40.82999999999993,
+      "phase": "baseline",
+      "signals": [],
+      "out_of_control": false,
+      "observed": {
+        "n": 5,
+        "below_lsl": 0,
+        "above_usl": 0,
+        "nonconforming": 0,
+        "fraction": 0.0
+      }
+    },
+    {
+      "id": "B014",
+      "time": "2026-09-07T20:00:00",
+      "values": [
+        1010.33,
+        964.36,
+        1010.66,
+        1008.34,
+        991.75
+      ],
+      "specimen_ids": [
+        "B014-C1",
+        "B014-C2",
+        "B014-C3",
+        "B014-C4",
+        "B014-C5"
+      ],
+      "context": {
+        "machine_id": "LPBF-01",
+        "powder_lot": "POWDER-A",
+        "oxygen_ppm": 63.8,
+        "laser_power_w": 282.8,
+        "scan_speed_mm_s": 1009.8,
+        "heat_treatment": "HT-A",
+        "notes": "Synthetic demonstration; no production data"
+      },
+      "mean": 997.088,
+      "range": 46.299999999999955,
+      "phase": "baseline",
+      "signals": [],
+      "out_of_control": false,
+      "observed": {
+        "n": 5,
+        "below_lsl": 0,
+        "above_usl": 0,
+        "nonconforming": 0,
+        "fraction": 0.0
+      }
+    },
+    {
+      "id": "B015",
+      "time": "2026-09-08T08:00:00",
+      "values": [
+        984.17,
+        993.58,
+        1020.43,
+        993.31,
+        994.54
+      ],
+      "specimen_ids": [
+        "B015-C1",
+        "B015-C2",
+        "B015-C3",
+        "B015-C4",
+        "B015-C5"
+      ],
+      "context": {
+        "machine_id": "LPBF-01",
+        "powder_lot": "POWDER-A",
+        "oxygen_ppm": 60.0,
+        "laser_power_w": 280.0,
+        "scan_speed_mm_s": 1020.7,
+        "heat_treatment": "HT-A",
+        "notes": "Synthetic demonstration; no production data"
+      },
+      "mean": 997.206,
+      "range": 36.25999999999999,
+      "phase": "baseline",
+      "signals": [],
+      "out_of_control": false,
+      "observed": {
+        "n": 5,
+        "below_lsl": 0,
+        "above_usl": 0,
+        "nonconforming": 0,
+        "fraction": 0.0
+      }
+    },
+    {
+      "id": "B016",
+      "time": "2026-09-08T20:00:00",
+      "values": [
+        981.86,
+        1013.28,
+        1000.05,
+        1034.25,
+        1004.21
+      ],
+      "specimen_ids": [
+        "B016-C1",
+        "B016-C2",
+        "B016-C3",
+        "B016-C4",
+        "B016-C5"
+      ],
+      "context": {
+        "machine_id": "LPBF-01",
+        "powder_lot": "POWDER-A",
+        "oxygen_ppm": 65.8,
+        "laser_power_w": 277.5,
+        "scan_speed_mm_s": 1002.6,
+        "heat_treatment": "HT-A",
+        "notes": "Synthetic demonstration; no production data"
+      },
+      "mean": 1006.73,
+      "range": 52.389999999999986,
+      "phase": "baseline",
+      "signals": [],
+      "out_of_control": false,
+      "observed": {
+        "n": 5,
+        "below_lsl": 0,
+        "above_usl": 0,
+        "nonconforming": 0,
+        "fraction": 0.0
+      }
+    },
+    {
+      "id": "B017",
+      "time": "2026-09-09T08:00:00",
+      "values": [
+        1004.85,
+        1026.19,
+        974.79,
+        1014.86,
+        1008.87
+      ],
+      "specimen_ids": [
+        "B017-C1",
+        "B017-C2",
+        "B017-C3",
+        "B017-C4",
+        "B017-C5"
+      ],
+      "context": {
+        "machine_id": "LPBF-01",
+        "powder_lot": "POWDER-A",
+        "oxygen_ppm": 75.9,
+        "laser_power_w": 277.4,
+        "scan_speed_mm_s": 998.5,
+        "heat_treatment": "HT-A",
+        "notes": "Synthetic demonstration; no production data"
+      },
+      "mean": 1005.912,
+      "range": 51.40000000000009,
+      "phase": "baseline",
+      "signals": [],
+      "out_of_control": false,
+      "observed": {
+        "n": 5,
+        "below_lsl": 0,
+        "above_usl": 0,
+        "nonconforming": 0,
+        "fraction": 0.0
+      }
+    },
+    {
+      "id": "B018",
+      "time": "2026-09-09T20:00:00",
+      "values": [
+        992.18,
+        981.28,
+        1002.93,
+        997.12,
+        1030.3
+      ],
+      "specimen_ids": [
+        "B018-C1",
+        "B018-C2",
+        "B018-C3",
+        "B018-C4",
+        "B018-C5"
+      ],
+      "context": {
+        "machine_id": "LPBF-01",
+        "powder_lot": "POWDER-A",
+        "oxygen_ppm": 77.3,
+        "laser_power_w": 281.4,
+        "scan_speed_mm_s": 1000.6,
+        "heat_treatment": "HT-A",
+        "notes": "Synthetic demonstration; no production data"
+      },
+      "mean": 1000.762,
+      "range": 49.01999999999998,
+      "phase": "baseline",
+      "signals": [],
+      "out_of_control": false,
+      "observed": {
+        "n": 5,
+        "below_lsl": 0,
+        "above_usl": 0,
+        "nonconforming": 0,
+        "fraction": 0.0
+      }
+    },
+    {
+      "id": "B019",
+      "time": "2026-09-10T08:00:00",
+      "values": [
+        994.07,
+        1003.92,
+        1012.36,
+        1021.72,
+        999.34
+      ],
+      "specimen_ids": [
+        "B019-C1",
+        "B019-C2",
+        "B019-C3",
+        "B019-C4",
+        "B019-C5"
+      ],
+      "context": {
+        "machine_id": "LPBF-01",
+        "powder_lot": "POWDER-A",
+        "oxygen_ppm": 60.1,
+        "laser_power_w": 280.6,
+        "scan_speed_mm_s": 981.2,
+        "heat_treatment": "HT-A",
+        "notes": "Synthetic demonstration; no production data"
+      },
+      "mean": 1006.282,
+      "range": 27.649999999999977,
+      "phase": "baseline",
+      "signals": [],
+      "out_of_control": false,
+      "observed": {
+        "n": 5,
+        "below_lsl": 0,
+        "above_usl": 0,
+        "nonconforming": 0,
+        "fraction": 0.0
+      }
+    },
+    {
+      "id": "B020",
+      "time": "2026-09-10T20:00:00",
+      "values": [
+        1007.37,
+        989.5,
+        1017.0,
+        1001.32,
+        1010.5
+      ],
+      "specimen_ids": [
+        "B020-C1",
+        "B020-C2",
+        "B020-C3",
+        "B020-C4",
+        "B020-C5"
+      ],
+      "context": {
+        "machine_id": "LPBF-01",
+        "powder_lot": "POWDER-A",
+        "oxygen_ppm": 56.1,
+        "laser_power_w": 280.9,
+        "scan_speed_mm_s": 1006.2,
+        "heat_treatment": "HT-A",
+        "notes": "Synthetic demonstration; no production data"
+      },
+      "mean": 1005.138,
+      "range": 27.5,
+      "phase": "baseline",
+      "signals": [],
+      "out_of_control": false,
+      "observed": {
+        "n": 5,
+        "below_lsl": 0,
+        "above_usl": 0,
+        "nonconforming": 0,
+        "fraction": 0.0
+      }
+    },
+    {
+      "id": "B021",
+      "time": "2026-09-11T08:00:00",
+      "values": [
+        1032.29,
+        1003.66,
+        995.56,
+        1001.68,
+        1022.24
+      ],
+      "specimen_ids": [
+        "B021-C1",
+        "B021-C2",
+        "B021-C3",
+        "B021-C4",
+        "B021-C5"
+      ],
+      "context": {
+        "machine_id": "LPBF-01",
+        "powder_lot": "POWDER-A",
+        "oxygen_ppm": 75.2,
+        "laser_power_w": 281.2,
+        "scan_speed_mm_s": 1003.4,
+        "heat_treatment": "HT-A",
+        "notes": "Synthetic demonstration; no production data"
+      },
+      "mean": 1011.086,
+      "range": 36.73000000000002,
+      "phase": "baseline",
+      "signals": [],
+      "out_of_control": false,
+      "observed": {
+        "n": 5,
+        "below_lsl": 0,
+        "above_usl": 0,
+        "nonconforming": 0,
+        "fraction": 0.0
+      }
+    },
+    {
+      "id": "B022",
+      "time": "2026-09-11T20:00:00",
+      "values": [
+        992.31,
+        974.1,
+        1004.49,
+        1003.45,
+        990.88
+      ],
+      "specimen_ids": [
+        "B022-C1",
+        "B022-C2",
+        "B022-C3",
+        "B022-C4",
+        "B022-C5"
+      ],
+      "context": {
+        "machine_id": "LPBF-01",
+        "powder_lot": "POWDER-A",
+        "oxygen_ppm": 65.9,
+        "laser_power_w": 281.0,
+        "scan_speed_mm_s": 1014.3,
+        "heat_treatment": "HT-A",
+        "notes": "Synthetic demonstration; no production data"
+      },
+      "mean": 993.046,
+      "range": 30.389999999999986,
+      "phase": "baseline",
+      "signals": [],
+      "out_of_control": false,
+      "observed": {
+        "n": 5,
+        "below_lsl": 0,
+        "above_usl": 0,
+        "nonconforming": 0,
+        "fraction": 0.0
+      }
+    },
+    {
+      "id": "B023",
+      "time": "2026-09-12T08:00:00",
+      "values": [
+        1007.77,
+        997.06,
+        977.75,
+        1006.79,
+        999.32
+      ],
+      "specimen_ids": [
+        "B023-C1",
+        "B023-C2",
+        "B023-C3",
+        "B023-C4",
+        "B023-C5"
+      ],
+      "context": {
+        "machine_id": "LPBF-01",
+        "powder_lot": "POWDER-A",
+        "oxygen_ppm": 72.0,
+        "laser_power_w": 281.2,
+        "scan_speed_mm_s": 988.1,
+        "heat_treatment": "HT-A",
+        "notes": "Synthetic demonstration; no production data"
+      },
+      "mean": 997.7379999999999,
+      "range": 30.019999999999982,
+      "phase": "baseline",
+      "signals": [],
+      "out_of_control": false,
+      "observed": {
+        "n": 5,
+        "below_lsl": 0,
+        "above_usl": 0,
+        "nonconforming": 0,
+        "fraction": 0.0
+      }
+    },
+    {
+      "id": "B024",
+      "time": "2026-09-12T20:00:00",
+      "values": [
+        991.34,
+        1006.01,
+        1015.23,
+        989.31,
+        1005.71
+      ],
+      "specimen_ids": [
+        "B024-C1",
+        "B024-C2",
+        "B024-C3",
+        "B024-C4",
+        "B024-C5"
+      ],
+      "context": {
+        "machine_id": "LPBF-01",
+        "powder_lot": "POWDER-A",
+        "oxygen_ppm": 59.0,
+        "laser_power_w": 281.0,
+        "scan_speed_mm_s": 1005.9,
+        "heat_treatment": "HT-A",
+        "notes": "Synthetic demonstration; no production data"
+      },
+      "mean": 1001.52,
+      "range": 25.920000000000073,
+      "phase": "baseline",
+      "signals": [],
+      "out_of_control": false,
+      "observed": {
+        "n": 5,
+        "below_lsl": 0,
+        "above_usl": 0,
+        "nonconforming": 0,
+        "fraction": 0.0
+      }
+    },
+    {
+      "id": "B025",
+      "time": "2026-09-13T08:00:00",
+      "values": [
+        1010.43,
+        995.41,
+        998.5,
+        1028.52,
+        999.87
+      ],
+      "specimen_ids": [
+        "B025-C1",
+        "B025-C2",
+        "B025-C3",
+        "B025-C4",
+        "B025-C5"
+      ],
+      "context": {
+        "machine_id": "LPBF-01",
+        "powder_lot": "POWDER-A",
+        "oxygen_ppm": 65.0,
+        "laser_power_w": 284.5,
+        "scan_speed_mm_s": 977.7,
+        "heat_treatment": "HT-A",
+        "notes": "Synthetic demonstration; no production data"
+      },
+      "mean": 1006.5459999999999,
+      "range": 33.110000000000014,
+      "phase": "baseline",
+      "signals": [],
+      "out_of_control": false,
+      "observed": {
+        "n": 5,
+        "below_lsl": 0,
+        "above_usl": 0,
+        "nonconforming": 0,
+        "fraction": 0.0
+      }
+    },
+    {
+      "id": "B026",
+      "time": "2026-09-13T20:00:00",
+      "values": [
+        882.64,
+        879.64,
+        890.94,
+        885.76,
+        893.04
+      ],
+      "specimen_ids": [
+        "B026-C1",
+        "B026-C2",
+        "B026-C3",
+        "B026-C4",
+        "B026-C5"
+      ],
+      "context": {
+        "machine_id": "LPBF-01",
+        "powder_lot": "POWDER-A",
+        "oxygen_ppm": 277.9,
+        "laser_power_w": 279.1,
+        "scan_speed_mm_s": 1004.2,
+        "heat_treatment": "HT-A",
+        "notes": "Synthetic demonstration; no production data"
+      },
+      "mean": 886.404,
+      "range": 13.399999999999977,
+      "phase": "monitoring",
+      "signals": [
+        "X-bar outside 3-sigma limits"
+      ],
+      "out_of_control": true,
+      "observed": {
+        "n": 5,
+        "below_lsl": 5,
+        "above_usl": 0,
+        "nonconforming": 5,
+        "fraction": 1.0
+      }
+    },
+    {
+      "id": "B027",
+      "time": "2026-09-14T08:00:00",
+      "values": [
+        916.14,
+        874.89,
+        894.39,
+        937.47,
+        876.95
+      ],
+      "specimen_ids": [
+        "B027-C1",
+        "B027-C2",
+        "B027-C3",
+        "B027-C4",
+        "B027-C5"
+      ],
+      "context": {
+        "machine_id": "LPBF-01",
+        "powder_lot": "POWDER-A",
+        "oxygen_ppm": 243.2,
+        "laser_power_w": 284.0,
+        "scan_speed_mm_s": 998.0,
+        "heat_treatment": "HT-A",
+        "notes": "Synthetic demonstration; no production data"
+      },
+      "mean": 899.968,
+      "range": 62.58000000000004,
+      "phase": "monitoring",
+      "signals": [
+        "X-bar outside 3-sigma limits"
+      ],
+      "out_of_control": true,
+      "observed": {
+        "n": 5,
+        "below_lsl": 3,
+        "above_usl": 0,
+        "nonconforming": 3,
+        "fraction": 0.6
+      }
+    },
+    {
+      "id": "B028",
+      "time": "2026-09-14T20:00:00",
+      "values": [
+        900.4,
+        909.36,
+        886.14,
+        865.97,
+        883.47
+      ],
+      "specimen_ids": [
+        "B028-C1",
+        "B028-C2",
+        "B028-C3",
+        "B028-C4",
+        "B028-C5"
+      ],
+      "context": {
+        "machine_id": "LPBF-01",
+        "powder_lot": "POWDER-A",
+        "oxygen_ppm": 248.0,
+        "laser_power_w": 278.9,
+        "scan_speed_mm_s": 1005.7,
+        "heat_treatment": "HT-A",
+        "notes": "Synthetic demonstration; no production data"
+      },
+      "mean": 889.068,
+      "range": 43.389999999999986,
+      "phase": "monitoring",
+      "signals": [
+        "X-bar outside 3-sigma limits"
+      ],
+      "out_of_control": true,
+      "observed": {
+        "n": 5,
+        "below_lsl": 3,
+        "above_usl": 0,
+        "nonconforming": 3,
+        "fraction": 0.6
+      }
+    },
+    {
+      "id": "B029",
+      "time": "2026-09-15T08:00:00",
+      "values": [
+        889.47,
+        910.97,
+        921.9,
+        898.43,
+        894.64
+      ],
+      "specimen_ids": [
+        "B029-C1",
+        "B029-C2",
+        "B029-C3",
+        "B029-C4",
+        "B029-C5"
+      ],
+      "context": {
+        "machine_id": "LPBF-01",
+        "powder_lot": "POWDER-A",
+        "oxygen_ppm": 269.9,
+        "laser_power_w": 280.9,
+        "scan_speed_mm_s": 976.5,
+        "heat_treatment": "HT-A",
+        "notes": "Synthetic demonstration; no production data"
+      },
+      "mean": 903.082,
+      "range": 32.42999999999995,
+      "phase": "monitoring",
+      "signals": [
+        "X-bar outside 3-sigma limits"
+      ],
+      "out_of_control": true,
+      "observed": {
+        "n": 5,
+        "below_lsl": 3,
+        "above_usl": 0,
+        "nonconforming": 3,
+        "fraction": 0.6
+      }
+    },
+    {
+      "id": "B030",
+      "time": "2026-09-15T20:00:00",
+      "values": [
+        897.55,
+        898.7,
+        882.83,
+        872.72,
+        878.33
+      ],
+      "specimen_ids": [
+        "B030-C1",
+        "B030-C2",
+        "B030-C3",
+        "B030-C4",
+        "B030-C5"
+      ],
+      "context": {
+        "machine_id": "LPBF-01",
+        "powder_lot": "POWDER-A",
+        "oxygen_ppm": 250.1,
+        "laser_power_w": 278.3,
+        "scan_speed_mm_s": 1000.6,
+        "heat_treatment": "HT-A",
+        "notes": "Synthetic demonstration; no production data"
+      },
+      "mean": 886.0260000000001,
+      "range": 25.980000000000018,
+      "phase": "monitoring",
+      "signals": [
+        "X-bar outside 3-sigma limits"
+      ],
+      "out_of_control": true,
+      "observed": {
+        "n": 5,
+        "below_lsl": 5,
+        "above_usl": 0,
+        "nonconforming": 5,
+        "fraction": 1.0
+      }
+    },
+    {
+      "id": "B031",
+      "time": "2026-09-16T08:00:00",
+      "values": [
+        885.0,
+        896.75,
+        912.83,
+        891.07,
+        905.02
+      ],
+      "specimen_ids": [
+        "B031-C1",
+        "B031-C2",
+        "B031-C3",
+        "B031-C4",
+        "B031-C5"
+      ],
+      "context": {
+        "machine_id": "LPBF-01",
+        "powder_lot": "POWDER-A",
+        "oxygen_ppm": 250.7,
+        "laser_power_w": 281.3,
+        "scan_speed_mm_s": 972.3,
+        "heat_treatment": "HT-A",
+        "notes": "Synthetic demonstration; no production data"
+      },
+      "mean": 898.134,
+      "range": 27.83000000000004,
+      "phase": "monitoring",
+      "signals": [
+        "X-bar outside 3-sigma limits"
+      ],
+      "out_of_control": true,
+      "observed": {
+        "n": 5,
+        "below_lsl": 3,
+        "above_usl": 0,
+        "nonconforming": 3,
+        "fraction": 0.6
+      }
+    },
+    {
+      "id": "B032",
+      "time": "2026-09-16T20:00:00",
+      "values": [
+        912.91,
+        904.91,
+        897.31,
+        939.95,
+        889.51
+      ],
+      "specimen_ids": [
+        "B032-C1",
+        "B032-C2",
+        "B032-C3",
+        "B032-C4",
+        "B032-C5"
+      ],
+      "context": {
+        "machine_id": "LPBF-01",
+        "powder_lot": "POWDER-A",
+        "oxygen_ppm": 256.8,
+        "laser_power_w": 278.5,
+        "scan_speed_mm_s": 991.9,
+        "heat_treatment": "HT-A",
+        "notes": "Synthetic demonstration; no production data"
+      },
+      "mean": 908.918,
+      "range": 50.440000000000055,
+      "phase": "monitoring",
+      "signals": [
+        "X-bar outside 3-sigma limits"
+      ],
+      "out_of_control": true,
+      "observed": {
+        "n": 5,
+        "below_lsl": 2,
+        "above_usl": 0,
+        "nonconforming": 2,
+        "fraction": 0.4
+      }
+    },
+    {
+      "id": "B033",
+      "time": "2026-09-17T08:00:00",
+      "values": [
+        924.74,
+        912.6,
+        869.01,
+        884.0,
+        896.43
+      ],
+      "specimen_ids": [
+        "B033-C1",
+        "B033-C2",
+        "B033-C3",
+        "B033-C4",
+        "B033-C5"
+      ],
+      "context": {
+        "machine_id": "LPBF-01",
+        "powder_lot": "POWDER-A",
+        "oxygen_ppm": 265.0,
+        "laser_power_w": 280.6,
+        "scan_speed_mm_s": 997.3,
+        "heat_treatment": "HT-A",
+        "notes": "Synthetic demonstration; no production data"
+      },
+      "mean": 897.356,
+      "range": 55.73000000000002,
+      "phase": "monitoring",
+      "signals": [
+        "X-bar outside 3-sigma limits",
+        "Eight or more consecutive means on one side"
+      ],
+      "out_of_control": true,
+      "observed": {
+        "n": 5,
+        "below_lsl": 3,
+        "above_usl": 0,
+        "nonconforming": 3,
+        "fraction": 0.6
+      }
+    },
+    {
+      "id": "B034",
+      "time": "2026-09-17T20:00:00",
+      "values": [
+        861.4,
+        888.93,
+        888.45,
+        895.18,
+        878.45
+      ],
+      "specimen_ids": [
+        "B034-C1",
+        "B034-C2",
+        "B034-C3",
+        "B034-C4",
+        "B034-C5"
+      ],
+      "context": {
+        "machine_id": "LPBF-01",
+        "powder_lot": "POWDER-A",
+        "oxygen_ppm": 266.3,
+        "laser_power_w": 277.3,
+        "scan_speed_mm_s": 972.9,
+        "heat_treatment": "HT-A",
+        "notes": "Synthetic demonstration; no production data"
+      },
+      "mean": 882.482,
+      "range": 33.77999999999997,
+      "phase": "monitoring",
+      "signals": [
+        "X-bar outside 3-sigma limits",
+        "Eight or more consecutive means on one side"
+      ],
+      "out_of_control": true,
+      "observed": {
+        "n": 5,
+        "below_lsl": 5,
+        "above_usl": 0,
+        "nonconforming": 5,
+        "fraction": 1.0
+      }
+    },
+    {
+      "id": "B035",
+      "time": "2026-09-18T08:00:00",
+      "values": [
+        895.55,
+        904.89,
+        901.86,
+        887.14,
+        910.24
+      ],
+      "specimen_ids": [
+        "B035-C1",
+        "B035-C2",
+        "B035-C3",
+        "B035-C4",
+        "B035-C5"
+      ],
+      "context": {
+        "machine_id": "LPBF-01",
+        "powder_lot": "POWDER-A",
+        "oxygen_ppm": 250.2,
+        "laser_power_w": 276.0,
+        "scan_speed_mm_s": 1004.0,
+        "heat_treatment": "HT-A",
+        "notes": "Synthetic demonstration; no production data"
+      },
+      "mean": 899.936,
+      "range": 23.100000000000023,
+      "phase": "monitoring",
+      "signals": [
+        "X-bar outside 3-sigma limits",
+        "Eight or more consecutive means on one side"
+      ],
+      "out_of_control": true,
+      "observed": {
+        "n": 5,
+        "below_lsl": 2,
+        "above_usl": 0,
+        "nonconforming": 2,
+        "fraction": 0.4
+      }
+    },
+    {
+      "id": "B036",
+      "time": "2026-09-18T20:00:00",
+      "values": [
+        881.23,
+        857.51,
+        892.34,
+        893.75,
+        884.57
+      ],
+      "specimen_ids": [
+        "B036-C1",
+        "B036-C2",
+        "B036-C3",
+        "B036-C4",
+        "B036-C5"
+      ],
+      "context": {
+        "machine_id": "LPBF-01",
+        "powder_lot": "POWDER-A",
+        "oxygen_ppm": 258.9,
+        "laser_power_w": 278.7,
+        "scan_speed_mm_s": 993.8,
+        "heat_treatment": "HT-A",
+        "notes": "Synthetic demonstration; no production data"
+      },
+      "mean": 881.88,
+      "range": 36.24000000000001,
+      "phase": "monitoring",
+      "signals": [
+        "X-bar outside 3-sigma limits",
+        "Eight or more consecutive means on one side"
+      ],
+      "out_of_control": true,
+      "observed": {
+        "n": 5,
+        "below_lsl": 5,
+        "above_usl": 0,
+        "nonconforming": 5,
+        "fraction": 1.0
+      }
+    },
+    {
+      "id": "B037",
+      "time": "2026-09-19T08:00:00",
+      "values": [
+        890.57,
+        882.39,
+        881.13,
+        888.95,
+        871.03
+      ],
+      "specimen_ids": [
+        "B037-C1",
+        "B037-C2",
+        "B037-C3",
+        "B037-C4",
+        "B037-C5"
+      ],
+      "context": {
+        "machine_id": "LPBF-01",
+        "powder_lot": "POWDER-A",
+        "oxygen_ppm": 254.3,
+        "laser_power_w": 280.7,
+        "scan_speed_mm_s": 1020.6,
+        "heat_treatment": "HT-A",
+        "notes": "Synthetic demonstration; no production data"
+      },
+      "mean": 882.814,
+      "range": 19.540000000000077,
+      "phase": "monitoring",
+      "signals": [
+        "X-bar outside 3-sigma limits",
+        "Eight or more consecutive means on one side"
+      ],
+      "out_of_control": true,
+      "observed": {
+        "n": 5,
+        "below_lsl": 5,
+        "above_usl": 0,
+        "nonconforming": 5,
+        "fraction": 1.0
+      }
+    },
+    {
+      "id": "B038",
+      "time": "2026-09-19T20:00:00",
+      "values": [
+        904.15,
+        905.51,
+        879.31,
+        900.05,
+        872.91
+      ],
+      "specimen_ids": [
+        "B038-C1",
+        "B038-C2",
+        "B038-C3",
+        "B038-C4",
+        "B038-C5"
+      ],
+      "context": {
+        "machine_id": "LPBF-01",
+        "powder_lot": "POWDER-A",
+        "oxygen_ppm": 259.0,
+        "laser_power_w": 280.1,
+        "scan_speed_mm_s": 1022.1,
+        "heat_treatment": "HT-A",
+        "notes": "Synthetic demonstration; no production data"
+      },
+      "mean": 892.386,
+      "range": 32.60000000000002,
+      "phase": "monitoring",
+      "signals": [
+        "X-bar outside 3-sigma limits",
+        "Eight or more consecutive means on one side"
+      ],
+      "out_of_control": true,
+      "observed": {
+        "n": 5,
+        "below_lsl": 2,
+        "above_usl": 0,
+        "nonconforming": 2,
+        "fraction": 0.4
+      }
+    },
+    {
+      "id": "B039",
+      "time": "2026-09-20T08:00:00",
+      "values": [
+        919.99,
+        898.51,
+        861.46,
+        898.29,
+        883.89
+      ],
+      "specimen_ids": [
+        "B039-C1",
+        "B039-C2",
+        "B039-C3",
+        "B039-C4",
+        "B039-C5"
+      ],
+      "context": {
+        "machine_id": "LPBF-01",
+        "powder_lot": "POWDER-A",
+        "oxygen_ppm": 262.5,
+        "laser_power_w": 280.8,
+        "scan_speed_mm_s": 990.8,
+        "heat_treatment": "HT-A",
+        "notes": "Synthetic demonstration; no production data"
+      },
+      "mean": 892.428,
+      "range": 58.52999999999997,
+      "phase": "monitoring",
+      "signals": [
+        "X-bar outside 3-sigma limits",
+        "Eight or more consecutive means on one side"
+      ],
+      "out_of_control": true,
+      "observed": {
+        "n": 5,
+        "below_lsl": 4,
+        "above_usl": 0,
+        "nonconforming": 4,
+        "fraction": 0.8
+      }
+    },
+    {
+      "id": "B040",
+      "time": "2026-09-20T20:00:00",
+      "values": [
+        859.41,
+        872.63,
+        901.59,
+        909.52,
+        918.55
+      ],
+      "specimen_ids": [
+        "B040-C1",
+        "B040-C2",
+        "B040-C3",
+        "B040-C4",
+        "B040-C5"
+      ],
+      "context": {
+        "machine_id": "LPBF-01",
+        "powder_lot": "POWDER-A",
+        "oxygen_ppm": 260.0,
+        "laser_power_w": 280.9,
+        "scan_speed_mm_s": 1004.7,
+        "heat_treatment": "HT-A",
+        "notes": "Synthetic demonstration; no production data"
+      },
+      "mean": 892.34,
+      "range": 59.139999999999986,
+      "phase": "monitoring",
+      "signals": [
+        "X-bar outside 3-sigma limits",
+        "Eight or more consecutive means on one side"
+      ],
+      "out_of_control": true,
+      "observed": {
+        "n": 5,
+        "below_lsl": 2,
+        "above_usl": 0,
+        "nonconforming": 2,
+        "fraction": 0.4
+      }
+    }
+  ],
+  "status": "process_shift",
+  "status_label": "Process signal detected",
+  "recommendation": "Investigate flagged builds and their recorded conditions. The historical baseline index cannot establish current capability; review affected production under the quality procedure.",
+  "warnings": [
+    "Capability requires representative, independent, approximately normal data and an adequate measurement system. Inspect the baseline Q-Q plot and sampling plan; no chart proves these assumptions.",
+    "Coupon strength is a process proxy. This tool does not certify brackets, approve release, or establish airworthiness.",
+    "Only the documented 3-sigma point and eight-on-one-side X-bar rules are applied; other special causes may go undetected.",
+    "Only a lower specification is supplied: Cpl/Ppl are used; Cp/Cpk and Pp/Ppk are undefined, not zero.",
+    "Monitoring signals are present. Do not use a good historical baseline index to endorse the changed process."
+  ],
+  "signals": {
+    "baseline": 0,
+    "monitoring": 15,
+    "total": 15
+  },
+  "observed": {
+    "all": {
+      "n": 200,
+      "below_lsl": 52,
+      "above_usl": 0,
+      "nonconforming": 52,
+      "fraction": 0.26
+    },
+    "baseline": {
+      "n": 125,
+      "below_lsl": 0,
+      "above_usl": 0,
+      "nonconforming": 0,
+      "fraction": 0.0
+    },
+    "monitoring": {
+      "n": 75,
+      "below_lsl": 52,
+      "above_usl": 0,
+      "nonconforming": 52,
+      "fraction": 0.6933333333333334
+    }
+  },
+  "qq": [
+    {
+      "z": -2.6520698079021954,
+      "value": 964.36
+    },
+    {
+      "z": -2.257129244486225,
+      "value": 974.1
+    },
+    {
+      "z": -2.0537489106318225,
+      "value": 974.79
+    },
+    {
+      "z": -1.911035647549118,
+      "value": 977.28
+    },
+    {
+      "z": -1.7991181068379667,
+      "value": 977.54
+    },
+    {
+      "z": -1.7060433968889612,
+      "value": 977.75
+    },
+    {
+      "z": -1.6257633862332344,
+      "value": 978.2
+    },
+    {
+      "z": -1.554773594596853,
+      "value": 978.66
+    },
+    {
+      "z": -1.4908533552466607,
+      "value": 981.28
+    },
+    {
+      "z": -1.4325027208258114,
+      "value": 981.71
+    },
+    {
+      "z": -1.3786587286232774,
+      "value": 981.86
+    },
+    {
+      "z": -1.3285393288568093,
+      "value": 983.07
+    },
+    {
+      "z": -1.2815515655446008,
+      "value": 983.3
+    },
+    {
+      "z": -1.2372345991628273,
+      "value": 983.52
+    },
+    {
+      "z": -1.1952227814374272,
+      "value": 983.76
+    },
+    {
+      "z": -1.1552208466119511,
+      "value": 984.17
+    },
+    {
+      "z": -1.1169867278766097,
+      "value": 984.78
+    },
+    {
+      "z": -1.080319340814956,
+      "value": 984.84
+    },
+    {
+      "z": -1.0450496996583891,
+      "value": 984.97
+    },
+    {
+      "z": -1.0110343281418164,
+      "value": 987.53
+    },
+    {
+      "z": -0.9781502862624715,
+      "value": 987.71
+    },
+    {
+      "z": -0.9462913579615762,
+      "value": 988.93
+    },
+    {
+      "z": -0.9153650878428141,
+      "value": 989.31
+    },
+    {
+      "z": -0.8852904488296414,
+      "value": 989.5
+    },
+    {
+      "z": -0.8559959854926817,
+      "value": 990.88
+    },
+    {
+      "z": -0.8274183207043823,
+      "value": 991.34
+    },
+    {
+      "z": -0.7995009431327367,
+      "value": 991.48
+    },
+    {
+      "z": -0.7721932141886849,
+      "value": 991.5
+    },
+    {
+      "z": -0.7454495481807888,
+      "value": 991.75
+    },
+    {
+      "z": -0.7192287304399239,
+      "value": 992.02
+    },
+    {
+      "z": -0.6934933462832893,
+      "value": 992.18
+    },
+    {
+      "z": -0.6682092997257232,
+      "value": 992.26
+    },
+    {
+      "z": -0.6433454053929168,
+      "value": 992.31
+    },
+    {
+      "z": -0.6188730405486289,
+      "value": 993.31
+    },
+    {
+      "z": -0.5947658468016782,
+      "value": 993.58
+    },
+    {
+      "z": -0.5709994731129874,
+      "value": 994.07
+    },
+    {
+      "z": -0.5475513533264015,
+      "value": 994.54
+    },
+    {
+      "z": -0.5244005127080407,
+      "value": 994.62
+    },
+    {
+      "z": -0.501527398977708,
+      "value": 995.27
+    },
+    {
+      "z": -0.47891373411225574,
+      "value": 995.32
+    },
+    {
+      "z": -0.45654238383984025,
+      "value": 995.41
+    },
+    {
+      "z": -0.43439724225978116,
+      "value": 995.56
+    },
+    {
+      "z": -0.4124631294414046,
+      "value": 995.99
+    },
+    {
+      "z": -0.39072570019686986,
+      "value": 996.25
+    },
+    {
+      "z": -0.3691713625030897,
+      "value": 997.06
+    },
+    {
+      "z": -0.3477872042786273,
+      "value": 997.12
+    },
+    {
+      "z": -0.32656092741237264,
+      "value": 998.09
+    },
+    {
+      "z": -0.3054807880993974,
+      "value": 998.41
+    },
+    {
+      "z": -0.2845355426716215,
+      "value": 998.5
+    },
+    {
+      "z": -0.26371439822153003,
+      "value": 998.59
+    },
+    {
+      "z": -0.24300696740998223,
+      "value": 998.95
+    },
+    {
+      "z": -0.2224032269272063,
+      "value": 999.32
+    },
+    {
+      "z": -0.2018934791418509,
+      "value": 999.34
+    },
+    {
+      "z": -0.1814683165284769,
+      "value": 999.72
+    },
+    {
+      "z": -0.16111858851074545,
+      "value": 999.87
+    },
+    {
+      "z": -0.1408353703971272,
+      "value": 1000.05
+    },
+    {
+      "z": -0.12060993411930719,
+      "value": 1001.32
+    },
+    {
+      "z": -0.10043372051146975,
+      "value": 1001.66
+    },
+    {
+      "z": -0.0802983128920549,
+      "value": 1001.68
+    },
+    {
+      "z": -0.06019541172895663,
+      "value": 1001.73
+    },
+    {
+      "z": -0.0401168101849681,
+      "value": 1002.93
+    },
+    {
+      "z": -0.020054370352950632,
+      "value": 1003.45
+    },
+    {
+      "z": 0.0,
+      "value": 1003.66
+    },
+    {
+      "z": 0.020054370352950632,
+      "value": 1003.72
+    },
+    {
+      "z": 0.0401168101849681,
+      "value": 1003.8
+    },
+    {
+      "z": 0.06019541172895663,
+      "value": 1003.92
+    },
+    {
+      "z": 0.08029831289205504,
+      "value": 1004.11
+    },
+    {
+      "z": 0.1004337205114699,
+      "value": 1004.21
+    },
+    {
+      "z": 0.12060993411930736,
+      "value": 1004.49
+    },
+    {
+      "z": 0.14083537039712735,
+      "value": 1004.85
+    },
+    {
+      "z": 0.16111858851074531,
+      "value": 1004.98
+    },
+    {
+      "z": 0.18146831652847673,
+      "value": 1005.25
+    },
+    {
+      "z": 0.20189347914185077,
+      "value": 1005.71
+    },
+    {
+      "z": 0.22240322692720618,
+      "value": 1005.72
+    },
+    {
+      "z": 0.24300696740998223,
+      "value": 1006.01
+    },
+    {
+      "z": 0.26371439822153003,
+      "value": 1006.24
+    },
+    {
+      "z": 0.2845355426716215,
+      "value": 1006.79
+    },
+    {
+      "z": 0.3054807880993974,
+      "value": 1007.18
+    },
+    {
+      "z": 0.32656092741237264,
+      "value": 1007.36
+    },
+    {
+      "z": 0.3477872042786273,
+      "value": 1007.37
+    },
+    {
+      "z": 0.3691713625030897,
+      "value": 1007.49
+    },
+    {
+      "z": 0.39072570019686986,
+      "value": 1007.77
+    },
+    {
+      "z": 0.41246312944140484,
+      "value": 1007.98
+    },
+    {
+      "z": 0.4343972422597813,
+      "value": 1008.34
+    },
+    {
+      "z": 0.4565423838398405,
+      "value": 1008.52
+    },
+    {
+      "z": 0.478913734112256,
+      "value": 1008.71
+    },
+    {
+      "z": 0.5015273989777079,
+      "value": 1008.87
+    },
+    {
+      "z": 0.5244005127080407,
+      "value": 1009.58
+    },
+    {
+      "z": 0.5475513533264013,
+      "value": 1009.75
+    },
+    {
+      "z": 0.5709994731129873,
+      "value": 1009.85
+    },
+    {
+      "z": 0.5947658468016782,
+      "value": 1009.96
+    },
+    {
+      "z": 0.6188730405486289,
+      "value": 1010.33
+    },
+    {
+      "z": 0.6433454053929168,
+      "value": 1010.43
+    },
+    {
+      "z": 0.6682092997257232,
+      "value": 1010.5
+    },
+    {
+      "z": 0.6934933462832893,
+      "value": 1010.53
+    },
+    {
+      "z": 0.7192287304399239,
+      "value": 1010.66
+    },
+    {
+      "z": 0.7454495481807888,
+      "value": 1010.85
+    },
+    {
+      "z": 0.7721932141886849,
+      "value": 1011.24
+    },
+    {
+      "z": 0.7995009431327367,
+      "value": 1011.73
+    },
+    {
+      "z": 0.8274183207043823,
+      "value": 1012.28
+    },
+    {
+      "z": 0.8559959854926822,
+      "value": 1012.36
+    },
+    {
+      "z": 0.8852904488296416,
+      "value": 1012.54
+    },
+    {
+      "z": 0.9153650878428139,
+      "value": 1012.71
+    },
+    {
+      "z": 0.9462913579615759,
+      "value": 1013.14
+    },
+    {
+      "z": 0.9781502862624715,
+      "value": 1013.28
+    },
+    {
+      "z": 1.0110343281418164,
+      "value": 1013.4
+    },
+    {
+      "z": 1.0450496996583891,
+      "value": 1013.55
+    },
+    {
+      "z": 1.080319340814956,
+      "value": 1014.28
+    },
+    {
+      "z": 1.1169867278766097,
+      "value": 1014.86
+    },
+    {
+      "z": 1.1552208466119511,
+      "value": 1015.23
+    },
+    {
+      "z": 1.1952227814374272,
+      "value": 1017.0
+    },
+    {
+      "z": 1.2372345991628273,
+      "value": 1017.45
+    },
+    {
+      "z": 1.2815515655446008,
+      "value": 1017.9
+    },
+    {
+      "z": 1.3285393288568093,
+      "value": 1020.43
+    },
+    {
+      "z": 1.3786587286232774,
+      "value": 1021.4
+    },
+    {
+      "z": 1.4325027208258119,
+      "value": 1021.72
+    },
+    {
+      "z": 1.490853355246661,
+      "value": 1022.24
+    },
+    {
+      "z": 1.5547735945968528,
+      "value": 1023.9
+    },
+    {
+      "z": 1.6257633862332341,
+      "value": 1026.19
+    },
+    {
+      "z": 1.7060433968889612,
+      "value": 1028.52
+    },
+    {
+      "z": 1.799118106837967,
+      "value": 1030.3
+    },
+    {
+      "z": 1.911035647549118,
+      "value": 1032.29
+    },
+    {
+      "z": 2.053748910631822,
+      "value": 1034.25
+    },
+    {
+      "z": 2.257129244486225,
+      "value": 1034.82
+    },
+    {
+      "z": 2.6520698079021954,
+      "value": 1035.04
+    }
+  ]
+}

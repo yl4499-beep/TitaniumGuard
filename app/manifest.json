@@ -1,0 +1,83 @@
+{
+  "version": 1,
+  "locale": "C.UTF-8",
+  "metadata": {
+    "appmode": "python-fastapi",
+    "entrypoint": "server:api"
+  },
+  "python": {
+    "version": "3.12.14",
+    "package_manager": {
+      "name": "pip",
+      "version": "25.0.1",
+      "package_file": "requirements.txt"
+    }
+  },
+  "environment": {
+    "python": {
+      "requires": "~=3.12.0"
+    }
+  },
+  "files": {
+    "requirements.txt": {
+      "checksum": "af4125fe3eb148b025b4d40cec4f6238"
+    },
+    ".python-version": {
+      "checksum": "33cc10613bb12360280f703cb78cd6c0"
+    },
+    "README.md": {
+      "checksum": "cff7a887c5ba113f568460d8225b64cf"
+    },
+    "__init__.py": {
+      "checksum": "d41d8cd98f00b204e9800998ecf8427e"
+    },
+    "deployme.sh": {
+      "checksum": "dc6444407fcc7e1cbc56844b128c4c5c"
+    },
+    "manifestme.sh": {
+      "checksum": "359633bd77ce7f40bd6d372a2d88184e"
+    },
+    "qc.py": {
+      "checksum": "14089b45239216486f89047171f20417"
+    },
+    "sample_data/mean_shift.csv": {
+      "checksum": "4c5d4420d2525f981d3d31f5c4b90ce1"
+    },
+    "sample_data/stable_capable.csv": {
+      "checksum": "91287520cf9eb4f92ef4c067c2fa660b"
+    },
+    "sample_data/stable_incapable.csv": {
+      "checksum": "e8d868129b220ddf75858fd53cfcddb9"
+    },
+    "server.py": {
+      "checksum": "5d8f2095e9dd9cb32aa50f1182349e6e"
+    },
+    "static/app.js": {
+      "checksum": "873f50c3eb192167eae400380f5dc69e"
+    },
+    "static/index.html": {
+      "checksum": "810b28cb620b0f22ad0c76fe7de23f1c"
+    },
+    "static/style.css": {
+      "checksum": "4bd09e016c1bd3e9ea24b289726f3fe3"
+    },
+    "static/vendor/LICENSE": {
+      "checksum": "3b83ef96387f14655fc854ddc3c6bd57"
+    },
+    "static/vendor/NOTICE": {
+      "checksum": "342625133694cfa71ee5eb6126af5825"
+    },
+    "static/vendor/README.md": {
+      "checksum": "ce9e6ea8f30142d8d47354914720928b"
+    },
+    "static/vendor/swagger-ui-bundle.js": {
+      "checksum": "bccc97f77bdb8edc590ae3abdf83b9a7"
+    },
+    "static/vendor/swagger-ui.css": {
+      "checksum": "fd5df98cfc0e58ed507042cd86a1f1df"
+    },
+    "testme.sh": {
+      "checksum": "cf5fd77747444136353d85b9fff11b19"
+    }
+  }
+}

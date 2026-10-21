@@ -1,2 +1,110 @@
 # TitaniumGuard
-Titanium strength process monitoring with X-bar/R charts and capability analysis — Cornell Six Sigma Hackathon, Virtual DL Challenge.
+**Cornell Six Sigma Hackathon · Virtual DL · 3D Printing for Aerospace**
+
+A quality engineer's workbench for titanium coupon-strength monitoring. Log builds, freeze a reference baseline, detect process shifts, and compare baseline strength margin with an engineering requirement. A transparent statistical core powers a same-origin browser interface.
+
+## Start in one command
+Requires Python3.12, a terminal and internet for the first dependency installation. Unzip/open the project folder, then:
+```bash
+bash app/testme.sh
+```
+Open the local address printed in the terminal, normally `http://127.0.0.1:8000`. The script creates a project `.venv` and installs the pinned application requirements on its first run. Stop with Ctrl+C. On Windows use WSL/Git Bash, or create a virtual environment, install `app/requirements.txt`, then run `python -m uvicorn app.server:api --host 127.0.0.1 --port 8000` from this folder.
+
+For a read-only demonstration without Python, open [demo/TitaniumGuard_Demo.html](demo/TitaniumGuard_Demo.html). It switches among three already-computed scenarios; it does not perform new analyses. The full app is required for upload and logging.
+
+## What the quality engineer does
+1. Select a synthetic demonstration, upload CSV, or add a complete build through the logging form.
+2. Enter the client-approved minimum strength (MPa), number of reference builds, and study target. Leave the optional upper limit blank unless an actual upper specification exists.
+3. Inspect the R chart, then X-bar, then historical baseline capability. A signal blocks a current-process capability endorsement even if the historical index is high.
+4. Investigate flagged builds using the recorded machine, powder, oxygen and recipe information. The tool shows descriptive context; it does not identify a cause.
+5. Export the supported CSV fields and analysis JSON. Build entries are held in the current browser session; export before navigating away. There is no shared database.
+
+## Minimal data contract
+Four columns are required:
+| Column | Meaning |
+|---|---|
+| build_id | One build/rational subgroup; rows must be contiguous |
+| build_time | ISO8601 timestamp, identical within a build and increasing between builds |
+| specimen_id | Unique independent destructive-test coupon identifier |
+| strength_mpa | Positive finite ultimate tensile strength in MPa |
+
+Optional build-level fields: machine_id, powder_lot, oxygen_ppm, laser_power_w, scan_speed_mm_s, heat_treatment, notes. Unknown CSV columns and JSON record fields are rejected, so a misspelled field cannot silently disappear. Identifiers and text metadata must be strings. LF, CRLF and CR line endings are accepted. Equal subgroup size2–10 is required; demos use5. Supplied metadata must be consistent within a build. Mixed machines or heat-treatment routes are rejected. The detailed [codebook and real collection protocol](data/README.md) explains what technicians can record without telemetry and what a real qualified study additionally requires.
+
+## Statistics and interpretation
+The first B builds estimate frozen Xbar/R limits using rounded NIST A2,D3,D4 constants. Within-subgroup sigma is Rbar/d2. The app flags a mean/range outside its3-sigma limits and the eighth and subsequent Xbar points strictly on one side of the center; it does not claim to implement every Western Electric rule.
+
+- Minimum-only strength specification: **Cpl**, `(baseline_mean-LSL)/(3*within_sigma)`.
+- Actual two-sided specification: also Cp,Cpu,Cpk; Cpk is the worse side.
+- Ppl/Ppu/Pp/Ppk substitute baseline sample SD (ddof1) and are labeled as overall performance.
+- Reported capability and performance estimates are from the historical baseline only. Observed nonconformance is separately counted for baseline, monitoring and all coupons.
+- Baseline instability, monitoring signals or fewer than25 baseline builds prevent a qualified target assessment. The25-build threshold is an explicit prototype study policy, not a universal certification standard.
+- A baseline Q-Q plot supports visual normality review. Approximate normality, independent and representative samples, rational subgrouping and measurement adequacy remain assumptions requiring engineering review.
+
+The app never estimates specifications from the observations, drops incomplete rows silently, normalizes a shift by recalculating limits, or predicts defect rates from an unstable process. Zero variation and malformed records produce clear errors.
+
+## Three demonstration fixtures
+All observations are synthetic. LSL900MPa and target1.33 are illustrative choices, not aviation/material standards. Seed42 was selected for clean contrasting demonstrations; this is disclosed in the codebook.
+
+| File | What to show | Historical baseline Cpl | Monitoring nonconforming |
+|---|---|---:|---:|
+| stable_capable.csv | No detected shift; baseline target met |2.246761|0/75|
+| mean_shift.csv | Mean drops from B026;15 builds flagged |2.246761|52/75|
+| stable_incapable.csv | No detected shift; inadequate margin |0.418036|10/75|
+
+The high baseline Cpl in the second row does **not** describe the changed process. Full computed values and the step-by-step demo are in [demo/README.md](demo/README.md).
+
+## Reproduce and test
+```bash
+.venv/bin/python -m pip install -r app/requirements-dev.txt
+.venv/bin/python -m pytest tests app/test_api.py -q
+.venv/bin/python data/generate.py
+.venv/bin/python demo/run_demo.py
+.venv/bin/python demo/build_preview.py
+```
+The core has71 numerical and validation tests; expanded API integration checks cover strict inputs, error responses and locally served documentation. Run the test command for the current total. An independent read-only review recomputed the hand fixture, the C/P estimators, frozen-baseline behavior, run logic and invalid inputs. See [review evidence](demo/STATISTICS_REVIEW.md). No scoring claim or external accreditation is made.
+
+`data/generate.py` is the authoritative generator. Before publishing changes to the data, copy the three generated CSVs to `app/sample_data/`, rerun tests and regenerate the deployment manifest. The packaged copies are identical.
+
+## Function and API documentation
+- `app.qc.parse_csv(text)`: UTF-8 CSV string to records; rejects malformed headers and incomplete rows.
+- `app.qc.analyze_records(records, lsl=900, usl=None, baseline_builds=25, target=1.33)`: returns metadata, frozen limits, historical baseline C/P indices, per-build signals and context, observed counts, Q-Q points, status, recommendation and warnings. Inputs are not mutated. Invalid inputs raise ValueError.
+- `app.qc.capability_indices(mu,sigma,lsl,usl,prefix='C')`: low-level formula helper; the caller supplies a positive finite appropriate sigma and validated specifications. `analyze_records` is the validated public analysis entry point.
+- `GET /health`: application health/version.
+- `GET /api/datasets`: three synthetic dataset descriptions.
+- `GET /api/datasets/{name}`: CSV demonstration.
+- `POST /api/analyze`: exactly one of `csv_text` or `records`, plus lsl, optional usl, integer baseline_builds and target. Validation failure returns422. Prototype limit20,000 records.
+- `GET /docs`: interactive API documentation.
+
+[App README](app/README.md) provides request examples and launch details.
+
+## Deploy and submit — account steps still required
+**Local testing is complete separately from publication. No public repository, course deployment or Devpost submission is claimed.**
+1. Review the code and create your own public GitHub repository; enter the actual team name and members. Do not publish to the event organizer's repository.
+2. Use the course Posit Connect publisher access. With CONNECT_SERVER and CONNECT_API_KEY set in your local environment, run `bash app/manifestme.sh` and then `bash app/deployme.sh`. Never place the key in a submitted document or public repository.
+3. Verify the resulting app from a signed-out browser, rerun the three demonstrations, and place the real URL in this README and Devpost.
+4. Use [DEVPOST_DRAFT](docs/DEVPOST_DRAFT.md) and [PITCH](docs/PITCH.md), recording a demonstration if the actual submission form requires one. Submit before the DL deadline shown by the organizer; published written schedule says Oct23,2026,3PM Eastern. The event-status banner may differ; verify the submission form with the organizer.
+
+The optional `.github/workflows/checks.yml` runs tests and release-file checks on future GitHub pushes and pull requests. The official deployment workflow is configured for `app/` and `/health`; it needs the two course repository secrets before it can succeed. These workflows have not run on GitHub yet.
+
+The publisher script targets the course Posit Connect server, not Connect Cloud. Interpreter compatibility must be confirmed with that server. No credential or deployment access is included in this package.
+
+## Project contents
+`app/` API/UI and deploy scripts; `data/` CSVs, generator, codebook; `tests/` statistical tests; `demo/` exact outputs, walkthrough and offline preview; `docs/` plan, sources, pitch, Devpost draft and Chinese guide. SPEC.md and CONTRACT.yaml track scope and remaining account tasks. Official agent workflow files are retained for continuation.
+
+## Attribution and limitations
+Sources, borrowed starter attribution and AI assistance disclosure are in [SOURCES](docs/SOURCES.md). ChatGPT/Codex assisted with code, test data and documentation, as encouraged by the event; the participant should review and understand the work.
+
+This is a process-monitoring educational prototype. Coupon strength does not establish individual bracket fitness or airworthiness. Production use needs validated sampling, measurements, audit records, access controls and qualified release procedures. No causal or failure prediction is made.
+
+## Optional real-browser acceptance checks
+```bash
+.venv/bin/python -m pip install playwright==1.51.0
+.venv/bin/python -m playwright install chromium
+.venv/bin/python tests/browser_smoke.py
+.venv/bin/python tests/check_release.py
+```
+On a minimal Linux system, Chromium may also need OS libraries (`playwright install --with-deps chromium`). Browser tooling is only for development. The acceptance script starts and stops its own local server and exercises root and reverse-proxy-prefixed routes. Swagger UI assets are vendored with their original license, so the app and interactive API documentation make no CDN request at runtime.
+
+Changing study settings marks the displayed results as pending and blocks logging/export until the new settings are successfully applied. The logging form names the study timezone. Records still live only in browser-tab memory: export CSV before leaving, and import a real baseline before appending real measurements to a synthetic practice study.
+
+中文说明：[GUIDE_ZH.md](docs/GUIDE_ZH.md). GitHub发布和真实留痕：[GITHUB_SUBMISSION_ZH.md](docs/GITHUB_SUBMISSION_ZH.md). 最新检查：[AUDIT_REPORT_ZH.md](docs/AUDIT_REPORT_ZH.md).
