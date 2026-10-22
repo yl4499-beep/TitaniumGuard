@@ -99,7 +99,7 @@ tasks:
 - id: H-06
   title: Deploy to the course Posit Connect server
   points: protects the 25 working-tool points - judges must be able to open it
-  status: blocked
+  status: in_progress
   owner: Codex
   started_at: '2026-10-20'
   owns:
@@ -115,13 +115,14 @@ tasks:
     it. Needs your own repo (H-08).
 
     '
-  definition_of_done: 'The workflow run is green, and the public URL answers HTTP
-    200 from a logged-out browser and returns the H-03 numbers for one test dataset.
-
-    '
-  result: 'Prepared official deployment workflow and valid 20-file manifest; isolated
-    manifest-only bundle runs. Real course credentials, server compatibility and
-    anonymous live-access verification still pending.'
+  definition_of_done: 'Connect Git-backed deployment completes for main/app; the
+    public homepage and health endpoint answer HTTP 200 without credentials;
+    all three full analysis fixtures match, and the public verification workflow
+    succeeds. GitHub Actions publishing is a manual alternative only.'
+  result: 'Published new TitaniumGuard content 4e02952e-c744-4f24-8791-463876e0bcb5
+    using native Git import, bundle 6811, Python 3.12.4. Anonymous HTTP checks
+    passed and all three full JSON/CSV fixtures matched. Public CI confirmation
+    is pending; no API key was created or copied.'
 - id: H-07
   title: README and function documentation
   points: '10 - Tool Documentation: excellent, easy-to-follow documentation'

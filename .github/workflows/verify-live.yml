@@ -1,0 +1,29 @@
+name: Verify public TitaniumGuard deployment
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'app/**'
+      - 'data/*.csv'
+      - 'demo/*.json'
+      - '.github/scripts/verify-live.py'
+      - '.github/workflows/verify-live.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  verify-public:
+    runs-on: ubuntu-latest
+    timeout-minutes: 6
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+      - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97
+        with:
+          python-version-file: app/.python-version
+      - name: Verify the anonymous live app and all three reviewed fixtures
+        run: python .github/scripts/verify-live.py "$CONTENT_URL"
+        env:
+          CONTENT_URL: https://connect.systems-apps.com/content/4e02952e-c744-4f24-8791-463876e0bcb5/

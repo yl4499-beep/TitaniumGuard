@@ -18,19 +18,14 @@
 # is verified, never regenerated, and rsconnect is never installed here.
 # Every `uses:` is pinned to a full commit SHA; the tag is in the comment.
 # =============================================================================
-name: Deploy FastAPI to Posit Connect
+name: Manual alternative - publish with a Posit API key
 
 on:
-  push:
-    branches: [main]
-    paths:
-      - '**.py'
-      - '**/requirements.txt'
-      - '**/manifest.json'
-      - '**/.python-version'
-      - '.github/workflows/deploy-fastapi.yml'
-      - '.github/scripts/connect-publish-async.sh'
   workflow_dispatch:
+
+# The live app is Git-backed in Posit Connect (main, app/). Do not run a
+# competing publisher on every push. This official template is retained as
+# a manual alternative; it requires secrets and an explicitly reviewed target.
 
 permissions:
   contents: read
