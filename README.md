@@ -1,6 +1,8 @@
 # TitaniumGuard
 **Cornell Six Sigma Hackathon · Virtual DL · 3D Printing for Aerospace**
 
+**[Open the live application](https://connect.systems-apps.com/content/4e02952e-c744-4f24-8791-463876e0bcb5/)** · Public access, no login required.
+
 A quality engineer's workbench for titanium coupon-strength monitoring. Log builds, freeze a reference baseline, detect process shifts, and compare baseline strength margin with an engineering requirement. A transparent statistical core powers a same-origin browser interface.
 
 ## Start in one command
@@ -77,16 +79,25 @@ The core has71 numerical and validation tests; expanded API integration checks c
 
 [App README](app/README.md) provides request examples and launch details.
 
-## Deploy and submit — account steps still required
-**Public repository: [https://github.com/yl4499-beep/TitaniumGuard](https://github.com/yl4499-beep/TitaniumGuard). Source published on 2026-10-21. Course deployment and Devpost submission remain pending.**
-1. Review the published code and enter the actual team name and members. Do not publish to the event organizer's repository.
-2. Use the course Posit Connect publisher access. With CONNECT_SERVER and CONNECT_API_KEY set in your local environment, run `bash app/manifestme.sh` and then `bash app/deployme.sh`. Never place the key in a submitted document or public repository.
-3. Verify the resulting app from a signed-out browser, rerun the three demonstrations, and place the real URL in this README and Devpost.
-4. Use [DEVPOST_DRAFT](docs/DEVPOST_DRAFT.md) and [PITCH](docs/PITCH.md), recording a demonstration if the actual submission form requires one. Submit before the DL deadline shown by the organizer; published written schedule says Oct23,2026,3PM Eastern. The event-status banner may differ; verify the submission form with the organizer.
+## Live deployment and submission
+**[Open TitaniumGuard](https://connect.systems-apps.com/content/4e02952e-c744-4f24-8791-463876e0bcb5/)** · [Public GitHub repository](https://github.com/yl4499-beep/TitaniumGuard).
 
-The optional `.github/workflows/checks.yml` runs tests and release-file checks on future GitHub pushes and pull requests. The official deployment workflow is configured for `app/` and `/health`; it needs the two course repository secrets before it can succeed. The first GitHub verification run passed (run 39548738151, source commit 00622df). The deployment run passed its import smoke test but stopped at the missing repository-secrets check; no live deployment is claimed.
+TitaniumGuard was deployed on 2026-10-21 (Eastern) to the course Posit Connect server using **Publish → Import from Git**, branch `main`, directory `app`. Connect builds the committed manifest and manages Git-backed updates. The server used compatible Python 3.12.4. No publisher API key was created or copied for this deployment.
 
-The publisher script targets the course Posit Connect server, not Connect Cloud. Interpreter compatibility must be confirmed with that server. No credential or deployment access is included in this package.
+Anonymous checks passed for the homepage, `/health`, API documentation, all three CSV downloads and all three full analysis responses against the reviewed JSON fixtures. Empty input returns HTTP 422. See [deployment evidence](docs/DEPLOYMENT.md).
+
+GitHub Actions separates two checks:
+- `Check TitaniumGuard`: statistical/API tests and manifest/data consistency.
+- `Verify public TitaniumGuard deployment`: public HTTP and exact fixture checks, without authentication.
+
+The original official API-key deployment template remains available through **manual workflow dispatch only**. Do not run it alongside the native Git publisher: its name-based target may create a different app. It requires the two repository secrets and a deliberately reviewed migration/target. The earlier failed run is retained as history; the actual live deployment used Connect's Git integration.
+
+Remaining submission steps:
+1. Enter the actual team name/members and truthfully describe the team's review in [DEVPOST_DRAFT](docs/DEVPOST_DRAFT.md).
+2. Submit the GitHub and live application links on Devpost. Add a demo recording only if the actual submission form requires it; no recording is claimed here.
+3. The [official kickoff slides, slide 10](https://timothyfraser.com/sigma/slides/40_slides_recitation_8.html#10) also direct students to submit the **repository URL and Devpost project link on Canvas**. Check the actual Canvas assignment's deadline and upload fields.
+
+The published DL schedule lists October 23, 2026, 3 PM Eastern. Devpost and Canvas submission are still pending; deployment alone does not submit either one.
 
 ## Project contents
 `app/` API/UI and deploy scripts; `data/` CSVs, generator, codebook; `tests/` statistical tests; `demo/` exact outputs, walkthrough and offline preview; `docs/` plan, sources, pitch, Devpost draft and Chinese guide. SPEC.md and CONTRACT.yaml track scope and remaining account tasks. Official agent workflow files are retained for continuation.

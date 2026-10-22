@@ -1,5 +1,5 @@
 # Devpost submission draft — TitaniumGuard
-Use after reading the code and running the demonstrations. Add the actual team, public GitHub URL and live course Posit Connect URL before submission. Do not submit placeholders.
+Use after reading the code and running the demonstrations. GitHub and live application links are verified below. Add the actual team and truthful human-review details before submission. Do not submit placeholders.
 
 ## Project name
 TitaniumGuard
@@ -31,12 +31,15 @@ Stability and capability answer different questions. No observed rejection in a 
 Validate measurement quality, the sampling plan, and coupon-to-bracket representativeness with the contractor. Add documented investigation and corrective-action records, then evaluate a new baseline after a verified improvement. A production version would require access control, audit history and qualified release procedures.
 
 ## Built with
-Python, FastAPI, JavaScript, HTML, CSS, pytest; intended deployment on course Posit Connect.
+Python, FastAPI, JavaScript, HTML, CSS, pytest; deployed on course Posit Connect through its native Git integration.
 
 ## AI assistance
 ChatGPT/Codex assisted with design, code, synthetic datasets, tests and documentation, as encouraged by the event. Sources and executed verification are included. The team reviewed [replace this bracketed statement with the review actually performed].
 
 ## Links to enter
 - Actual public GitHub repository: https://github.com/yl4499-beep/TitaniumGuard
-- Actual live Posit Connect application: pending deployment and public-access verification.
+- Actual live Posit Connect application: https://connect.systems-apps.com/content/4e02952e-c744-4f24-8791-463876e0bcb5/
 - Demonstration video: record the provided walkthrough if the submission form requests a video; no recording has been fabricated.
+
+## Submission status and Canvas follow-up
+This file is a draft; no Devpost submission has been completed. After submitting on Devpost, the official kickoff slide 10 also asks for the repository URL and Devpost project link on Canvas. Check the course assignment for its deadline and fields.

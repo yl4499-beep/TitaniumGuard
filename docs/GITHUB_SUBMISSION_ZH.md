@@ -1,38 +1,42 @@
 # GitHub 留痕与提交说明
 
-## 官方明确要求与建议做法
+## 当前状态
 
-官方要求把完整、可复现的代码公开到 GitHub，并在 Devpost 提交仓库链接和已部署原型的演示。当前公开评分表没有规定最低 commit 数量、每天提交次数，或必须上传聊天记录。官方工作流程建议按任务保存 commit，这适合记录真实的开发过程。
+- 完整源代码已公开：https://github.com/yl4499-beep/TitaniumGuard
+- 在线项目已部署：https://connect.systems-apps.com/content/4e02952e-c744-4f24-8791-463876e0bcb5/
+- 公开访问已验证：评委无需登录；三个示例的完整 JSON 与已审核结果一致，CSV 下载一致，空输入返回 422。
+- GitHub 自动检查已通过：109 项统计/API 测试、20 个 manifest 文件校验和及三组数据镜像检查。
+- 公开网站检查工作流已通过：[运行 39697302954](https://github.com/yl4499-beep/TitaniumGuard/actions/runs/39697302954)。
+- **尚未提交 Devpost 或 Canvas；真实团队名单和团队审核说明待补充。**
 
-来源：
-- https://github.com/timothyfraser/sixsigmahackathon
+部署通过课程 Posit Connect 的 **Publish → Import from Git** 完成，来源是本仓库 `main` 分支的 `app` 目录。无需另建 API Key。原来的 API Key 部署工作流保留为手动备用方式，不再随 push 运行；不要同时启用两个发布方式。此前缺少 secrets 的失败运行保留为真实历史记录。
+
+详细目标、版本和实际检查输出见 [DEPLOYMENT.md](DEPLOYMENT.md)。
+
+## 代码过程是否必须在 GitHub 完成
+
+公开评分标准要求完整、可复现的代码发布到 GitHub。当前公开要求没有规定最低 commit 数、每日提交次数或上传全部聊天记录。可以在本地或 AI 工具中开发，再把真实修改提交到仓库。
+
+本项目保留了真实的源代码发布、文档更新、部署配置和线上验证提交，以及实际运行的 CI。不要补造早期开发时间或假提交，也不要把未完成的团队审核写成已经完成。
+
+## 接下来提交什么
+
+1. 在 Devpost 中填写实际项目名和团队成员，审核 [DEVPOST_DRAFT.md](DEVPOST_DRAFT.md) 中的文案与 AI 协助说明。
+2. 填入上面的 GitHub 链接和在线演示链接。演示视频等字段以实际提交表单为准；当前没有制作或提交视频。
+3. 完成 Devpost 正式提交，并保存生成的项目页面链接。
+4. [官方 kickoff 幻灯片第 10 页](https://timothyfraser.com/sigma/slides/40_slides_recitation_8.html#10) 还要求在 **Canvas 提交 GitHub 仓库网址和 Devpost 项目链接**。核对实际 Canvas 作业的截止时间和字段。
+
+已公布的 DL 截止时间是 2026 年 10 月 23 日下午 3 点（美国东部时间）。项目上线不等于 Devpost 或 Canvas 已提交。
+
+## 使用与演示
+
+依次展示 Stable process、Mean shift、Low strength margin，解释为什么历史 Cpl 较高时仍然必须优先处理当前过程信号。CSV 是明确标注的模拟数据；900 MPa 和 1.33 是教学示例，不是航空材料标准。
+
+手工输入的数据只保存在当前浏览器标签页内，离开前下载 CSV。真实生产数据应从自己的基线 CSV 开始，避免与示例模拟数据混用。
+
+## 官方来源
+
+- https://six-sigma-hackathon.devpost.com/
 - https://github.com/timothyfraser/sixsigmahackathon/blob/main/docs/criteria.md
 - https://github.com/timothyfraser/sixsigmahackathon/blob/main/.claude/skills/superagent/SKILL.md
-
-2026-10-21 已公开完整源代码：https://github.com/yl4499-beep/TitaniumGuard。真实提交 00622df 上传了已审核的原型、数据、测试和部署配置；首次 GitHub 自动检查运行 39548738151 已通过。部署运行停在缺少课程 secrets 的检查，尚未上线，也尚未提交 Devpost。历史审计报告保留检查当时的状态。
-
-## 建议保留什么
-
-1. 首次发布完整可运行的版本，可以使用真实的提交说明 `Add reviewed TitaniumGuard prototype`。
-2. 后续每次实际修复、文档修改或部署更新，再分别 commit；说明改了什么及为什么改。
-3. 保留测试、数据生成代码、数据说明、统计方法来源、AI 使用说明和本次检查报告。
-4. 上传源代码目录结构，而不仅上传一个 ZIP。老师应能克隆仓库、照 README 运行。
-5. 使用你本人或团队实际的 GitHub 身份，填写真实的组员信息。
-
-现有作品是在 AI 协助下完成的，应按 docs/SOURCES.md 说明 AI 的实际作用。不要补写虚假的早期开发日期或将未完成的团队审核写成已经完成。可从当前完成状态开始真实记录。
-
-## 发布顺序
-
-1. 下载并解压 TitaniumGuard_Project.zip，检查 README 和三个示例。
-2. 在你或团队的 GitHub 账户下创建公开仓库，将解压后的 TitaniumGuard 目录作为项目根目录。GitHub Desktop 或命令行都可以。
-3. 确认 GitHub 仓库根目录能看到 README.md、app/、data/、demo/、docs/、tests/、SPEC.md 和 CONTRACT.yaml。
-4. `.github/workflows/checks.yml` 会在未来的 push/PR 上运行统计/API 测试和部署文件检查。首次运行已通过；后续提交继续查看对应运行结果。
-5. 如果采用自动部署，在仓库设置中配置课程发给你的 CONNECT_SERVER 和 CONNECT_API_KEY secrets；部署流程使用课程官方模板。没有这两个配置时，部署工作流会报缺少配置，属于尚未部署。
-6. 发布后在未登录浏览器检查应用主页、三个示例、CSV 导入和 `/docs`，把真实地址填写到 README 与 Devpost。
-7. 审核 docs/DEVPOST_DRAFT.md，替换团队审核情况和链接占位内容，在截止时间前正式提交。
-
-服务器兼容性、账户权限和匿名访问只能在真实课程服务器上确认。本地全部通过不会自动创建公开仓库、上线应用或提交 Devpost。
-
-## 注意保存数据
-
-应用是课程用的过程分析原型。手工输入的数据保存在当前浏览器标签页内；离开前下载 CSV。真实生产数据应从自己的基线 CSV 开始，避免与示例模拟数据混用。
+- https://timothyfraser.com/sigma/slides/40_slides_recitation_8.html#10

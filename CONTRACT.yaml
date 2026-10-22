@@ -99,7 +99,7 @@ tasks:
 - id: H-06
   title: Deploy to the course Posit Connect server
   points: protects the 25 working-tool points - judges must be able to open it
-  status: in_progress
+  status: done
   owner: Codex
   started_at: '2026-10-20'
   owns:
@@ -107,22 +107,17 @@ tasks:
   - .github/scripts/
   - app/manifest.json
   - app/.python-version
-  notes: 'Load the connect-publish skill. Copy ONE workflow for your stack from .claude/skills/connect-publish/workflows/
-    to .github/workflows/ and the script(s) it names from .claude/skills/connect-publish/scripts/
-    to .github/scripts/; set APP_DIR to ''app'' in its env block. Add the CONNECT_SERVER
-    and CONNECT_API_KEY repo secrets (handed out at the event, never in a file). Write
-    manifest.json on your own machine with the demo''s manifestme script and commit
-    it. Needs your own repo (H-08).
-
-    '
+  notes: 'Native Connect Import from Git publishes main/app from the public repo.
+    No API key was created. The official key-based workflow is retained as a
+    manual alternative only; public verification has its own workflow.'
   definition_of_done: 'Connect Git-backed deployment completes for main/app; the
     public homepage and health endpoint answer HTTP 200 without credentials;
     all three full analysis fixtures match, and the public verification workflow
     succeeds. GitHub Actions publishing is a manual alternative only.'
-  result: 'Published new TitaniumGuard content 4e02952e-c744-4f24-8791-463876e0bcb5
-    using native Git import, bundle 6811, Python 3.12.4. Anonymous HTTP checks
-    passed and all three full JSON/CSV fixtures matched. Public CI confirmation
-    is pending; no API key was created or copied.'
+  result: 'Live Git-backed content 4e02952e-c744-4f24-8791-463876e0bcb5,
+    bundle 6811, compatible Python 3.12.4. Anonymous endpoints and all three
+    full JSON/CSV fixtures passed. Public verification run 39697302954 and
+    statistical/API/release run 39697302948 succeeded; 109 tests passed.'
 - id: H-07
   title: README and function documentation
   points: '10 - Tool Documentation: excellent, easy-to-follow documentation'
@@ -133,17 +128,17 @@ tasks:
   - README.md
   - app/README.md
   - docs/
-  notes: Documentation and submission package authorized by the user; live URL remains
-    pending until actual deployment.
+  notes: Documentation and submission package authorized by the user; live URL and
+    deployment evidence are now documented. Actual team review remains pending.
   definition_of_done: 'README.md says what the tool does, for whom, every input and
     parameter, how each function or endpoint works, how to run it in one command,
     the live URL, and links demo/README.md. A teammate who did not write the code
     follows it from a fresh clone and it works.
 
     '
-  result: 'Local README, API guide, audit report, codebook, pitch, Devpost draft,
-    Chinese guide and attribution prepared. Definition of done also needs the real
-    live URL, which is blocked on H-06; actual team review remains to be filled in.'
+  result: 'README and submission draft contain the verified live URL; deployment
+    report records actual public and CI checks. Canvas follow-up is documented.
+    Actual human/team review is still required and has not been invented.'
 - id: H-08
   title: Reproducible public repo, submitted on Devpost
   points: '5 - Tool Documentation: fully reproducible code, posted publicly to GitHub'
