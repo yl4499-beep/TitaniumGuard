@@ -11,7 +11,7 @@ A quality engineer's workbench for titanium coupon-strength monitoring. Log buil
 
 *Actual application screenshot with synthetic demonstration data; captured from the same application code used by the live deployment.*
 
-**Demo materials:** [three-scenario walkthrough](demo/README.md) · [English speaking script](docs/PITCH.md) · [video-preview details](docs/DEMO_PREVIEW.md). A 2 min 29 sec English-captioned, silent screen recording is available separately as `TitaniumGuard_Demo_EN.mp4`; a public video-hosting link and Devpost submission have not been created.
+**Demo materials:** [three-scenario walkthrough](demo/README.md) · [English speaking script](docs/PITCH.md) · [video-preview details](docs/DEMO_PREVIEW.md). A 2 min 29 sec English-captioned screen recording is available separately as `TitaniumGuard_Demo_EN.mp4` (no audio). Video upload instructions and the current submission status are linked above.
 
 ## Start in one command
 Requires Python 3.12, a terminal and internet for the first dependency installation. Unzip/open the project folder, then:
@@ -80,7 +80,7 @@ The high baseline Cpl in the second row does **not** describe the changed proces
 .venv/bin/python demo/run_demo.py
 .venv/bin/python demo/build_preview.py
 ```
-The last verified full suite passed **109 tests**: **71 numerical/schema tests** under `tests/` plus **38 API tests** in `app/test_api.py`. API checks cover strict inputs, error responses and locally served documentation. See the [successful verification run](https://github.com/yl4499-beep/TitaniumGuard/actions/runs/39697302948); run the command above to verify your checkout. An independent read-only review recomputed the hand fixture, the C/P estimators, frozen-baseline behavior, run logic and invalid inputs. See [review evidence](demo/STATISTICS_REVIEW.md). No scoring claim or external accreditation is made.
+The last verified full suite passed **109 tests**: **71 numerical/schema tests** under `tests/` plus **38 API tests** in `app/test_api.py`. API checks cover strict inputs, error responses and locally served documentation. See the [successful verification run](https://github.com/yl4499-beep/TitaniumGuard/actions/runs/39697302948); run the command above to verify your checkout. A separate AI-assisted read-only review recomputed the hand fixture, the C/P estimators, frozen-baseline behavior, run logic and invalid inputs. See [review evidence](demo/STATISTICS_REVIEW.md). No scoring claim or external accreditation is made.
 
 `data/generate.py` is the authoritative generator. Before publishing changes to the data, copy the three generated CSVs to `app/sample_data/`, rerun tests and regenerate the deployment manifest. The packaged copies are identical.
 
@@ -109,18 +109,18 @@ GitHub Actions separates two checks:
 
 The original official API-key deployment template remains available through **manual workflow dispatch only**. Do not run it alongside the native Git publisher: its name-based target may create a different app. It requires the two repository secrets and a deliberately reviewed migration/target. The earlier failed run is retained as history; the actual live deployment used Connect's Git integration.
 
-Remaining submission steps:
-1. Use **Yunkuan Liu** as the project owner and sole actual participant. Confirm individual-entry eligibility with the organizer: the published event requires 2–5 members, and no exception has been verified. Yunkuan Liu has confirmed his [personal review](docs/OWNER_REVIEW.md), as recorded in [DEVPOST_DRAFT](docs/DEVPOST_DRAFT.md).
-2. Submit the GitHub and live application links on Devpost. Include the working demonstration. An English-captioned preview is available separately; check the actual Devpost form for its video field and accepted hosting format before uploading it.
+Submission steps:
+1. Use **Yunkuan Liu** as the project owner and sole actual participant. Use [the project description](docs/DEVPOST_DRAFT.md) for the matching Devpost fields.
+2. Upload `TitaniumGuard_Demo_EN.mp4` to YouTube, set visibility to Public or Unlisted, and enter its viewing link in the Devpost **Video demo link** field. Include the GitHub and live application links, check the embedded video, and complete the hackathon submission.
 3. The [official kickoff slides, slide 10](https://timothyfraser.com/sigma/slides/40_slides_recitation_8.html#10) also direct students to submit the **repository URL and Devpost project link on Canvas**. Check the actual Canvas assignment's deadline and upload fields.
 
-The published DL schedule lists October 23, 2026, 3 PM Eastern. Devpost and Canvas submission are still pending; deployment alone does not submit either one.
+The published DL schedule lists October 23, 2026, 3 PM Eastern. Video hosting and Devpost/Canvas submission have not yet been verified. See [ownership, review and eligibility status](docs/OWNER_REVIEW.md) for the current record. Deployment alone does not submit either form.
 
 ## Project contents
 `app/` API/UI and deploy scripts; `data/` CSVs, generator, codebook; `tests/` statistical tests; `demo/` exact outputs, walkthrough and offline preview; `docs/` plan, sources, pitch, Devpost draft and Chinese guide. SPEC.md and CONTRACT.yaml track scope and remaining account tasks. Official agent workflow files are retained for continuation.
 
 ## Attribution and limitations
-Sources, borrowed starter attribution and AI assistance disclosure are in [SOURCES](docs/SOURCES.md). ChatGPT/Codex assisted with code, test data and documentation, as encouraged by the event; the participant should review and understand the work.
+Sources, borrowed starter attribution and AI assistance disclosure are in [SOURCES](docs/SOURCES.md). ChatGPT/Codex assisted with design, code, test data, tests and documentation, as encouraged by the event. Yunkuan Liu has confirmed that he personally reviewed the project.
 
 This is a process-monitoring educational prototype. Coupon strength does not establish individual bracket fitness or airworthiness. Production use needs validated sampling, measurements, audit records, access controls and qualified release procedures. No causal or failure prediction is made.
 
@@ -135,4 +135,4 @@ On a minimal Linux system, Chromium may also need OS libraries (`playwright inst
 
 Changing study settings marks the displayed results as pending and blocks logging/export until the new settings are successfully applied. The logging form names the study timezone. Records still live only in browser-tab memory: export CSV before leaving, and import a real baseline before appending real measurements to a synthetic practice study.
 
-中文说明：[GUIDE_ZH.md](docs/GUIDE_ZH.md). GitHub发布和真实留痕：[GITHUB_SUBMISSION_ZH.md](docs/GITHUB_SUBMISSION_ZH.md). 最新检查：[AUDIT_REPORT_ZH.md](docs/AUDIT_REPORT_ZH.md).
+中文说明：[GUIDE_ZH.md](docs/GUIDE_ZH.md). GitHub发布和真实留痕：[GITHUB_SUBMISSION_ZH.md](docs/GITHUB_SUBMISSION_ZH.md). 当前提交状态：[OWNER_REVIEW.md](docs/OWNER_REVIEW.md). 历史技术检查：[AUDIT_REPORT_ZH.md](docs/AUDIT_REPORT_ZH.md).

@@ -5,7 +5,8 @@ human_participants:
 - Yunkuan Liu
 ai_assistance: ChatGPT/Codex
 ownership_note: Current task ownership identifies the accountable human project owner.
-  historical_executor records earlier AI execution; ownership does not certify personal review.
+  historical_executor records earlier AI execution. Personal review was separately
+  confirmed by Yunkuan Liu on 2026-10-22 (H-10).
 tasks:
 - id: H-01
   title: Fill in every FILL IN line in SPEC.md
@@ -27,7 +28,7 @@ tasks:
 
     '
   result: SPEC contains zero unfilled technical fields; project owner Yunkuan Liu and verified public links
-    recorded. Individual-entry eligibility and personal review remain pending.
+    recorded. Personal review is confirmed; individual-entry eligibility remains unverified.
 - id: H-02
   title: Two or three test datasets plus a codebook
   points: '10 - Tool Documentation: 2-3 working test datasets (5), codebook and README
@@ -148,7 +149,9 @@ tasks:
   notes: >-
     User requested review fixes: improve documentation spacing and test counts,
     remove the Devpost placeholder, document the existing oxygen scatter plot, and
-    add screenshots and the available video preview. Yunkuan Liu's personal review remains pending.
+    add screenshots and the available video preview. Yunkuan Liu confirmed personal review
+    on 2026-10-22. The original non-author teammate walkthrough requirement is not
+    verified for this solo project; technical reproduction and owner review are recorded separately.
   definition_of_done: 'README.md says what the tool does, for whom, every input and
     parameter, how each function or endpoint works, how to run it in one command,
     the live URL, and links demo/README.md. A teammate who did not write the code
@@ -159,7 +162,7 @@ tasks:
     into 71 numerical/schema plus 38 API tests; Devpost placeholder removed without
     inventing human review; actual overview and existing oxygen-scatter screenshots;
     2:29 captioned video preview documented. Fixture JSON stayed byte-identical,
-    release checks and local links passed. Yunkuan Liu''s personal review remains pending.'
+    release checks and local links passed. Yunkuan Liu confirmed personal review on 2026-10-22.'
 - id: H-08
   title: Reproducible public repo, submitted on Devpost
   points: '5 - Tool Documentation: fully reproducible code, posted publicly to GitHub'
@@ -183,7 +186,8 @@ tasks:
   result: 'Published all 123 source files to yl4499-beep/TitaniumGuard on 2026-10-21
     in commit 00622df. GitHub verification run 39548738151 passed. Public clone
     succeeded. The sole human owner is now confirmed as Yunkuan Liu; individual-entry
-    eligibility, personal review, Devpost and Canvas submission remain pending.'
+    eligibility and final Devpost/Canvas submission remain unverified. Personal review
+    was confirmed on 2026-10-22.'
 
 - id: H-09
   title: Reconcile review feedback and identify the sole human project owner
@@ -198,7 +202,8 @@ tasks:
   - docs/
   notes: User authorized another review pass and identified Yunkuan Liu as the sole
     project owner. Preserve AI attribution and real Git history. Do not invent
-    teammates, personal review, an individual-entry exception or final submission.
+    teammates, an individual-entry exception or final submission; personal review was
+    subsequently confirmed in H-10.
   definition_of_done: Documentation identifies one human owner consistently; no stale
     missing-roster or missing-video claim remains in current submission guides;
     review checklist records pending human actions; release checks and unchanged
@@ -206,8 +211,8 @@ tasks:
   result: '109 tests passed with 1 third-party deprecation warning; release check
     passed 20 checksums and 3 dataset mirrors; 29 local documentation links passed.
     Owner and sole human participant recorded as Yunkuan Liu. Application, datasets
-    and result fixtures unchanged. Personal review, individual-entry eligibility
-    and Devpost/Canvas submission remain pending.'
+    and result fixtures unchanged. This historical check preceded the personal review confirmation in H-10.
+    Individual-entry eligibility and final Devpost/Canvas submission remain unverified.'
 
 - id: H-10
   title: Record confirmed personal review and English demo captions
@@ -223,3 +228,35 @@ tasks:
   - docs/OWNER_REVIEW.md
   definition_of_done: Submission draft records the owner's confirmed review, retains AI attribution, and contains no Chinese-caption references; video and ownership details agree.
   result: 'PASS: confirmed personal review and AI attribution present; three submission documents contain no Chinese text or obsolete caption references; English video filename and duration agree. This confirmation supersedes earlier pending-review notes. Application code and final submission status unchanged.'
+
+- id: H-11
+  title: Review and reconcile all project-facing documentation for submission
+  status: done
+  owner: Yunkuan Liu
+  assisted_by: Codex
+  started_at: '2026-10-22'
+  owns:
+  - CONTRACT.yaml
+  - README.md
+  - SPEC.md
+  - docs/
+  - data/README.md
+  - app/README.md
+  - app/manifest.json
+  - demo/README.md
+  - demo/STATISTICS_REVIEW.md
+  - demo/run_demo.py
+  notes: User requested a complete non-code documentation review. Changes to the demo
+    generator are limited to generated documentation strings; analysis and application
+    logic remain unchanged. Record the confirmed personal review and English silent
+    demo; preserve accurate AI attribution and historical evidence.
+  definition_of_done: All project-facing Markdown reviewed; current review, video,
+    deployment and submission statements agree; local links resolve; documented
+    demo numbers match recomputed fixtures; generated README reproduces exactly;
+    release checks pass and runtime code/data remain unchanged.
+  result: 'PASS: reviewed 20 project-facing Markdown files and verified 56 local
+    links; recomputed all three fixtures without changing JSON outputs; generated
+    README reproduced exactly; 20 manifest checksums and 3 dataset mirrors passed.
+    Anonymous live checks matched all three full JSON/CSV fixtures and rejected
+    invalid input with HTTP 422. Runtime code, datasets and tests unchanged;
+    demo-generator edits contain documentation strings only.'

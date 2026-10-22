@@ -30,7 +30,7 @@ PY
 ```
 Expected: `meets_target 2.246761300154673` (minor final floating-point digits may vary).
 
-The alternative records input is a list of objects with the documented CSV fields. Supply records or csv_text, never both. Unsupported units must be converted before upload. No missing strength imputation, row deletion, subgroup completion or automatic reordering is performed. The documented body limit and row limit keep this prototype small.
+The alternative records input is a list of objects with the documented CSV fields. Supply records or csv_text, never both. Unsupported units must be converted before upload. No missing strength imputation, row deletion, subgroup completion or automatic reordering is performed. The API accepts at most 2,000,000 characters in `csv_text` and at most 20,000 coupon records per analysis. The character limit is specific to the CSV string, not a general HTTP request-body size limit.
 
 ## Responses and parameters
 - lsl: positive client minimum in MPa; default 900 is demonstration-only.

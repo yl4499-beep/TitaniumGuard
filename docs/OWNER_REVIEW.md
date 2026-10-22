@@ -5,19 +5,21 @@
 **Confirmed by the participant:** 2026-10-22  
 **AI assistance:** ChatGPT/Codex
 
-Yunkuan Liu is the accountable human project owner. No additional human teammate is claimed. `CONTRACT.yaml` identifies the current human owner separately from the historical AI executor. Existing commits, template files and AI-use disclosures are retained. Ownership is not a claim that every line was manually written or personally reviewed.
+Yunkuan Liu is the accountable human project owner. No additional human teammate is claimed. `CONTRACT.yaml` identifies the current human owner separately from the historical AI executor. Existing commits, template files and AI-use disclosures are retained. Personal review is confirmed below; the project does not claim that every line was manually authored.
 
 ## Eligibility and submission
 
-The [official Devpost page](https://six-sigma-hackathon.devpost.com/) and [official README](https://github.com/timothyfraser/sixsigmahackathon/blob/main/README.md), checked on 2026-10-22, specify teams of **2–5**. No approved individual-entry exception has been provided. Confirm permission with the organizer before claiming that this one-person entry meets the team requirement. Do not add a fictitious member or count an AI assistant as a member.
+Status checked on 2026-10-22. This document records verified actions, not a submission receipt.
+
+The [official Devpost page](https://six-sigma-hackathon.devpost.com/) and [official README](https://github.com/timothyfraser/sixsigmahackathon/blob/main/README.md), checked on 2026-10-22, specify teams of **2–5**. The owner is participating alone; an organizer-approved exception to that published team requirement has not been verified. This administrative question is separate from the technical readiness of the project.
 
 - Project title: TitaniumGuard; no separate registered team name is claimed.
 - GitHub and public course Posit Connect deployment: completed; links are in the main README.
-- Captioned screen recording: available as `TitaniumGuard_Demo_EN.mp4`, 2 min 29 sec, English captions, no audio; not publicly hosted or submitted.
+- Captioned screen recording: available as `TitaniumGuard_Demo_EN.mp4`, 2 min 29 sec, English captions, no audio; hosting and submission not yet verified.
 - Personal review: **completed, confirmed by Yunkuan Liu on 2026-10-22**.
 - Individual-entry permission: **unverified**.
-- Devpost submission and resulting project URL: **pending**.
-- Canvas repository/project-link submission: **pending**.
+- Devpost submission and resulting project URL: **not yet verified**.
+- Canvas repository/project-link submission: **not yet verified**.
 
 ## Personal review confirmation
 

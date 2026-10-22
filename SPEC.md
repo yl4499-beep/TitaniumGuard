@@ -31,22 +31,22 @@ Method: X-bar and R charts on chronological rational subgroups, with limits froz
 - No capability endorsement if baseline or monitoring signals occur. Report historical baseline indices, with a clear warning. Fewer than 25 baseline builds is preliminary; no qualified assessment. A normal Q-Q plot of baseline values supports visual inspection, but does not prove normality. Independence, approximately normal baseline output, representative subgrouping and measurement adequacy need engineering review.
 - No p-values, causal models, lifetime predictions, predicted defects or automatic release approvals.
 
-Known-answer fixture: three size-5 groups [98,99,100,101,102], [99,100,101,102,103], [100,101,102,103,104]; LSL90, USL110, baseline3. Mean=(100+101+102)/3=101; R-bar=(4+4+4)/3=4; sigma=4/2.326=1.7196904557; Xbar LCL=101-.577*4=98.692, UCL=103.308; R LCL=0, UCL=2.115*4=8.460 (NIST rounded table constant). Cpl=11*2.326/12=2.1321666667; Cpu=Cpk=9*2.326/12=1.7445; Cp=20*2.326/24=1.9383333333. Baseline sample SD=sqrt(40/14)=1.6903085095. Ppl=11/(3*sqrt(40/14)); Ppk=9/(3*sqrt(40/14)); Pp=20/(6*sqrt(40/14)). All calculations shown despite preliminary study size.
+Known-answer fixture: three size-5 groups [98,99,100,101,102], [99,100,101,102,103], [100,101,102,103,104]; LSL = 90, USL = 110, baseline = 3. Mean=(100+101+102)/3=101; R-bar=(4+4+4)/3=4; sigma=4/2.326=1.7196904557; Xbar LCL=101-.577*4=98.692, UCL=103.308; R LCL=0, UCL=2.115*4=8.460 (NIST rounded table constant). Cpl=11*2.326/12=2.1321666667; Cpu=Cpk=9*2.326/12=1.7445; Cp=20*2.326/24=1.9383333333. Baseline sample SD=sqrt(40/14)=1.6903085095. Ppl=11/(3*sqrt(40/14)); Ppk=9/(3*sqrt(40/14)); Pp=20/(6*sqrt(40/14)). All calculations shown despite preliminary study size.
 Degenerate cases: zero within-build variation, n=1, unequal subgroup sizes, nonfinite or missing strength, repeated specimen IDs, inconsistent build metadata, timestamps not ordered, invalid limits -> clear errors; never silently drop a row or return infinity.
 Planted shift: append low-strength build(s) to a stable baseline and assert the first displaced mean is signaled without changing the limits.
 References: NIST/SEMATECH handbook sections 6.3.2.1 (charts) and 6.1.6 (capability); course convention for within vs overall estimators. Tabulated constants are rounded; document this.
 
 ## 5. Delivery
-FastAPI Python API with a same-origin HTML/CSS/JavaScript dashboard. Start from the official `demos/fastapi` template. Statistics live in `app/qc.py`; UI displays Python results. No node build or external chart CDN required. Keep testme.sh, manifestme.sh, deployme.sh and README.md. Course Posit Connect is the intended deployment target; local functionality and deploy preparation are distinct from a verified live deployment.
+FastAPI Python API with a same-origin HTML/CSS/JavaScript dashboard. Start from the official `demos/fastapi` template. Statistics live in `app/qc.py`; UI displays Python results. No node build or external chart CDN required. Keep testme.sh, manifestme.sh, deployme.sh and README.md. Course Posit Connect is the deployed target; see docs/DEPLOYMENT.md for the verified publishing path and public checks.
 
 ## 6. Outputs
 State and recommendation, sample counts, baseline Cpl (or Cp/Cpk when USL exists), baseline P indices, X-bar/R charts, Q-Q plot, chronological build table with reason flags, environmental context, observed nonconformance, downloadable JSON and CSV. Form entry adds a complete build in browser memory and allows CSV export; there is no shared persistent database.
 
 ## 7. Test datasets
-Three synthetic CSVs, each 40 chronological builds x5 coupons: stable_capable.csv, mean_shift.csv (shift begins build26), stable_incapable.csv. All use reproducible seeded generation and have an explicit codebook and collection protocol. The third case is a stable process with too little margin over LSL, not an invalid input; degenerate cases live in unit tests.
+Three synthetic CSVs, each 40 chronological builds × 5 coupons: stable_capable.csv, mean_shift.csv (shift begins at build 26), stable_incapable.csv. All use reproducible seeded generation and have an explicit codebook and collection protocol. The third case is a stable process with too little margin over LSL, not an invalid input; degenerate cases live in unit tests.
 
 ## 8. Documentation and reproducibility
-Root README, app README, data codebook/generator, exact demo results and walkthrough, English pitch/Devpost draft, Chinese study guide, source list, tests and Posit scripts. No invented team identity, publication URL or score. Final user account actions remain clearly pending if credentials are unavailable.
+Root README, app README, data codebook/generator, exact demo results and walkthrough, English pitch/Devpost draft, Chinese study guide, source list, tests and Posit scripts. No invented team identity, publication URL or score. Yunkuan Liu has confirmed personal review. Video hosting and final Devpost/Canvas submission are recorded separately from deployment in docs/OWNER_REVIEW.md.
 
 ## 9. Out of scope
 Flight certification; individual bracket release; forecasting; causal inference; automatic parameter tuning; mixed machine pooling; telemetry; user accounts or database. No universal titanium strength or regulatory threshold is claimed.

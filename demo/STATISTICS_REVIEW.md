@@ -1,7 +1,9 @@
-# Statistical verification
+# Statistical verification and dated audit evidence
+
+**Current delivery note (2026-10-22):** GitHub publication and public Posit Connect deployment have since been verified; see [deployment evidence](../docs/DEPLOYMENT.md). Yunkuan Liu has confirmed personal review. The earlier test counts and publishing statements below describe their dated audit stage, not current submission status. Current status is in [OWNER_REVIEW.md](../docs/OWNER_REVIEW.md).
 
 The initial checks below record the first implementation. See the expanded audit at the end for the current release.
-An independent read-only review recomputed the SPEC fixture separately from the test expectations and ran the code. No substantive statistical bugs were found. This is a code review of the prototype, not external accreditation.
+A separate AI-assisted read-only review recomputed the SPEC fixture separately from the test expectations and ran the code. No substantive statistical bugs were found. This is a code review of the prototype, not external accreditation.
 
 | Quantity | Independent expected | Computed |
 |---|---:|---:|
@@ -18,9 +20,9 @@ An independent read-only review recomputed the SPEC fixture separately from the 
 | Ppu/Ppk |1.774823934930|1.774823934930|
 | Pp |1.972026594367|1.972026594367|
 
-Also independently verified: Q-Q score CDF error below1.12e-16; no monitoring observations return null fraction; no USL leaves bilateral indices null; appending a low build does not change baseline limits or indices; the first low build is flagged; the eighth same-side point starts a run alert without backdating; a central point resets the run; values exactly at specification boundaries are conforming; baseline instability blocks an endorsement even when its descriptive index is large.
+Also independently verified: Q-Q score CDF error below 1.12e-16; no monitoring observations return null fraction; no USL leaves bilateral indices null; appending a low build does not change baseline limits or indices; the first low build is flagged; the eighth same-side point starts a run alert without backdating; a central point resets the run; values exactly at specification boundaries are conforming; baseline instability blocks an endorsement even when its descriptive index is large.
 
-Seventeen independent invalid-input checks covered constant values, subgroup size1, unequal sizes, empty input, too few builds, invalid/infinite limits, missing/nonfinite/negative strength, duplicate specimens, inconsistent metadata and unordered timestamps. Errors were explicit. Constant data produced a ValueError explaining zero within-build variation and undefined capability.
+Seventeen independent invalid-input checks covered constant values, subgroup size 1, unequal sizes, empty input, too few builds, invalid/infinite limits, missing/nonfinite/negative strength, duplicate specimens, inconsistent metadata and unordered timestamps. Errors were explicit. Constant data produced a ValueError explaining zero within-build variation and undefined capability.
 
 Executed core suite:
 ```
@@ -33,27 +35,27 @@ Core plus API suite:
 The warning is a third-party Starlette/AnyIO deprecation notice, not a failed assertion. Test versions are pinned in app/requirements-dev.txt; browser checks are recorded separately after the UI is complete.
 
 ## Browser verification
-Using local Chromium via Playwright, verified all three status outcomes, successful build entry200→205 coupons, duplicate-build validation preserving the prior200 records, optional USL switching Cpl→Cpk, CSV upload, export of200 CSV records, JSON matching the displayed analysis, a flagged-only filter showing15 shifted builds, and a390px viewport without horizontal page overflow. Zero browser JavaScript errors occurred. Desktop and mobile screenshots were inspected internally; no screenshot is included as a deliverable.
+Using local Chromium via Playwright, verified all three status outcomes, successful build entry 200→205 coupons, duplicate-build validation preserving the prior 200 records, optional USL switching Cpl→Cpk, CSV upload, export of 200 CSV records, JSON matching the displayed analysis, a flagged-only filter showing 15 shifted builds, and a 390 px viewport without horizontal page overflow. Zero browser JavaScript errors occurred. Desktop and mobile screenshots were inspected internally at that stage. Actual application and oxygen-scatter screenshots were subsequently added under docs/images/.
 
 The independent self-contained preview also passed three scenario-switch checks and had zero JavaScript errors. It is explicitly read-only; new calculations require the Python app.
 
 ## Clean-directory reproduction
-Copied the source into an empty temporary directory with no pre-existing virtual environment. Executed `bash app/testme.sh` using its default bootstrap path, confirmed health200 and the HTML page, then analyzed mean_shift through HTTP and obtained process_shift with15 flagged builds. Installed the documented development requirements into that new environment and reran the complete suite:
+Copied the source into an empty temporary directory with no pre-existing virtual environment. Executed `bash app/testme.sh` using its default bootstrap path, confirmed health 200 and the HTML page, then analyzed mean_shift through HTTP and obtained process_shift with 15 flagged builds. Installed the documented development requirements into that new environment and reran the complete suite:
 ```
 59 passed, 1 warning in 0.46s
 ```
-The local Posit manifest was generated successfully with the real rsconnect CLI; its15 bundled-file records and present-file checksums were inspected. This verifies packaging preparation only. No request was made to a course Connect server and no public deployment is claimed.
+The local Posit manifest was generated successfully with the real rsconnect CLI; its 15 bundled-file records and present-file checksums were inspected. This verifies packaging preparation only. No request was made to a course Connect server and no public deployment is claimed.
 
 ## Expanded pre-submission audit — 2026-10-20
-Independent numerical review again verified every SPEC calculation and subgroup sizes2–10. It found schema flaws (unknown optional fields silently discarded and nontext identifiers stringified); both were reproduced, fixed and re-reviewed with OVERALL PASS. No statistical formula changed. The core now has71 checks. API validation now rejects booleans/coerced strings, unknown option names and nonfinite numbers safely. Swagger assets are served locally.
+Independent numerical review again verified every SPEC calculation and subgroup sizes 2–10. It found schema flaws (unknown optional fields silently discarded and nontext identifiers stringified); both were reproduced, fixed and re-reviewed with OVERALL PASS. No statistical formula changed. The core now has 71 checks. API validation now rejects booleans/coerced strings, unknown option names and nonfinite numbers safely. Swagger assets are served locally.
 
 Fresh empty-directory bootstrap, from an unrelated working directory and a path containing spaces, succeeded with `bash /path/to/project/app/testme.sh`; all three HTTP scenarios matched expected output. The new independent environment returned:
 ```
 109 passed, 1 warning in 0.51s
 No broken requirements found.
 ```
-The warning remains a third-party Starlette/AnyIO deprecation. All three seeded CSVs regenerated byte-for-byte identically. A 20,000-record request returned HTTP200 with4,000 groups in0.29 seconds on this test machine; this is one local measurement, not a performance guarantee.
+The warning remains a third-party Starlette/AnyIO deprecation. All three seeded CSVs regenerated byte-for-byte identically. A 20,000-record request returned HTTP 200 with 4,000 groups in 0.29 seconds on this test machine; this is one local measurement, not a performance guarantee.
 
-The reusable `tests/browser_smoke.py` passed24 checks: four initial charts, three scenarios, flagged filter, CSV/JSON export and CSV round trip, invalid input preserving results, unilateral/bilateral settings, unapplied-settings guard, valid/duplicate manual entries, explicit UTC timezone and preservation, synthetic-record disclosure,390/768/1440px widths, reverse-proxy-prefixed application and interactive docs, and zero JavaScript errors. An additional isolated browser denied external traffic and successfully rendered Swagger then executed prefixed `/health`: five local requests, zero external requests and zero JS errors.
+The reusable `tests/browser_smoke.py` passed 24 checks: four initial charts, three scenarios, flagged filter, CSV/JSON export and CSV round trip, invalid input preserving results, unilateral/bilateral settings, unapplied-settings guard, valid/duplicate manual entries, explicit UTC timezone and preservation, synthetic-record disclosure, 390/768/1440px widths, reverse-proxy-prefixed application and interactive docs, and zero JavaScript errors. An additional isolated browser denied external traffic and successfully rendered Swagger then executed prefixed `/health`: five local requests, zero external requests and zero JS errors.
 
-Publishing remains unverified: no GitHub repository/commits, GitHub Actions run, real course Connect deployment, anonymous public access check or Devpost submission has been performed.
+At the time of this 2026-10-20 audit, publishing was unverified. Subsequent GitHub publication, CI runs, course deployment and anonymous checks are documented in DEPLOYMENT.md; final Devpost/Canvas submission has not yet been verified.

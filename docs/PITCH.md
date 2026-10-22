@@ -1,6 +1,6 @@
-# Three-minute demonstration script
+# Optional spoken demonstration script
 
-Speaker: **Yunkuan Liu**. This is a rehearsal script, not evidence of a completed personal review or submitted recording. The timing is a target; practise with the app before recording.
+Speaker: **Yunkuan Liu**. This optional script targets approximately three minutes; its times do not match the separate 2 min 29 sec English-captioned recording. It is not an additional submission requirement. The published criteria require a clear demonstration but do not specify narration or a PPT.
 
 **0:00–0:25 — Problem and user**
 “I’m Yunkuan Liu, the project owner. With ChatGPT/Codex assistance, I built TitaniumGuard, for the DL 3D Printing for Aerospace challenge. It helps a quality engineer understand whether a titanium printing process is changing and whether it has enough margin over a client’s strength requirement. The data in this demonstration are synthetic.”
@@ -12,7 +12,7 @@ Speaker: **Yunkuan Liu**. This is a rehearsal script, not evidence of a complete
 Load Stable process. Show the R chart first, then X-bar. “The range chart monitors variation within builds; the mean chart monitors movement between builds. The app uses R-bar divided by d2 for within-process sigma. There is only a minimum strength in this example, so the relevant index is Cpl. This is an estimated baseline index, conditional on the sampling and distribution assumptions.”
 
 **1:25–1:55 — Shift case**
-Load Mean shift. “The planted shift starts at build 26. Notice that the limits have not widened. The current process triggers investigation even though its historical baseline had a high capability index. Scroll below the control charts to Oxygen & build strength. Each point represents a build: recorded oxygen is on the x-axis and average coupon strength is on the y-axis. The two synthetic clusters show the planted association, with signal builds in red. That is a clue to investigate, not proof of causation.”
+Load Mean shift, then scroll to Oxygen & build strength. “The planted shift starts at build 26. Notice that the limits have not widened. The current process triggers investigation even though its historical baseline had a high capability index. The Oxygen & build strength plot provides additional context. Each point represents a build: recorded oxygen is on the x-axis and average coupon strength is on the y-axis. The two synthetic clusters show the planted association, with signal builds in red. That is a clue to investigate, not proof of causation.”
 
 **1:55–2:20 — Stable but inadequate**
 Load Low margin. “This illustrates why a stable chart does not imply adequate capability. The output can remain statistically consistent while lying too close to the lower specification. The quality engineer needs a verified process improvement, rather than treating every ordinary fluctuation as a special cause.”

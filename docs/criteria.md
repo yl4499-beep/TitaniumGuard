@@ -1,4 +1,6 @@
-![Hackathon Banner](images/banner_thin.png)
+> Official reference snapshot. For current event requirements, consult the [original document](https://github.com/timothyfraser/sixsigmahackathon/blob/main/docs/criteria.md) and [Devpost](https://six-sigma-hackathon.devpost.com/). Project-specific scope is in [SPEC.md](../SPEC.md).
+
+![Hackathon Banner](https://raw.githubusercontent.com/timothyfraser/sixsigmahackathon/main/docs/images/banner_thin.png)
 ---
 
 # 🏆  Evaluation Criteria
@@ -30,7 +32,7 @@ How polished and ready is this tool for public use?
 - (5 pts) Fully reproducible code, posted publicly to a Github Repository,
 
 ---
-![Hackathon Banner](images/banner_icons.png)
+![Hackathon Banner](https://raw.githubusercontent.com/timothyfraser/sixsigmahackathon/main/docs/images/banner_icons.png)
 
  
 

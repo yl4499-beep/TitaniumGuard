@@ -1,18 +1,21 @@
 # Sources and attribution
-Accessed 2026-10-20 UTC. Sources ground requirements and formulas; all example observations and settings are invented.
+Initial sources accessed 2026-10-20 UTC; submission and video guidance rechecked 2026-10-22. Sources ground requirements and formulas; all example observations and settings are invented.
 
 1. Cornell Six Sigma Hackathon, Devpost: https://six-sigma-hackathon.devpost.com/ . Official DL Industrial Systems prompt, "3D Printing for Aerospace", and grading requirements. The page also lists Blood Banks and Civil Liberties. Prompt is summarized, not copied in full.
 2. Official project repository: https://github.com/timothyfraser/sixsigmahackathon . Starter snapshot 6c702e6 (2026-10-17). FastAPI four-script starter adapted; official agent instructions retained. Project implementation and UI are new.
 3. Evaluation criteria: https://github.com/timothyfraser/sixsigmahackathon/blob/main/docs/criteria.md . Working tool 25; valid analysis 25; scope 5; use case 5; minimal inputs 5; demo 10; documentation 10; datasets 5; codebook 5; public reproducibility 5.
-4. Schedule: https://github.com/timothyfraser/sixsigmahackathon/blob/main/docs/schedule.md . DL submission listed as Oct 23, 2026, 3 PM Eastern. The Devpost page's event-status banner and written schedule may disagree; verify that the DL submission form is open with the organizer. Do not interpret the banner as an extension or a cancellation.
+4. Schedule: https://github.com/timothyfraser/sixsigmahackathon/blob/main/docs/schedule.md . DL submission listed as Oct 23, 2026, 3 PM Eastern. The current Devpost overview and official schedule agree on this DL deadline.
 5. NIST/SEMATECH e-Handbook 6.3.2.1, Shewhart X-bar and R and S Control Charts: https://www.itl.nist.gov/div898/handbook/pmc/section3/pmc321.htm . Xbar/R formulas and rounded A2, D3, D4 factors. This implementation consistently uses the NIST table (n = 5: D4 = 2.115).
 6. NIST/SEMATECH e-Handbook 6.1.6, What is Process Capability?: https://www.itl.nist.gov/div898/handbook/pmc/section1/pmc16.htm . Capability formulas, one-sided Cpl/Cpu and normality assumptions. The project explicitly uses within-subgroup Rbar/d2 for C indices and overall sample SD for P indices, following the official course-agent convention.
 7. Course materials: https://timothyfraser.com/sigma/ . See official repository's stats-first-steering skill for baseline, subgroup and estimator conventions.
 8. FastAPI documentation: https://fastapi.tiangolo.com/tutorial/first-steps/ . API framework and ASGI serving.
-9. Posit Connect publishing documentation: https://docs.posit.co/connect/user/publishing-cli-apps/ and https://docs.posit.co/rsconnect-python/ . Intended course deployment route.
+9. Posit Connect publishing documentation: https://docs.posit.co/connect/user/publishing-cli-apps/ and https://docs.posit.co/rsconnect-python/ . CLI publishing references; the deployed project uses native Git-backed publishing, documented in [DEPLOYMENT.md](DEPLOYMENT.md).
+
+10. Devpost demo-video instructions: https://help.devpost.com/article/85-uploading-a-demo-video . Upload to a supported video host, then enter the viewing URL in the hackathon submission. A project page and its hackathon submission can have different videos; verify the submission preview.
+11. YouTube visibility settings: https://support.google.com/youtube/answer/157177 . Public and Unlisted videos can be watched through a shared link; Private is unsuitable for unrestricted judge access.
 
 ## AI use disclosure
-**Yunkuan Liu is the project owner and sole human participant.** OpenAI ChatGPT/Codex assisted with project design, synthetic data generation, Python implementation, tests, interface and documentation. The statistics were checked against independently computed known answers and boundary cases; verification results are recorded in demo/. Yunkuan Liu must personally review the code and be able to explain the methods. Automated tests and AI-assisted cross-checks do not constitute his personal review; its completion has not been claimed. No claim is made that simulated data are field observations or that the prototype is an aerospace certification system.
+**Yunkuan Liu is the project owner and sole human participant.** OpenAI ChatGPT/Codex assisted with project design, synthetic data generation, Python implementation, tests, interface and documentation. The statistics were checked against independently computed known answers and boundary cases; verification results are recorded in demo/. Yunkuan Liu confirmed on 2026-10-22 that he has personally reviewed the project. That confirmation is separate from the automated tests and AI-assisted numerical cross-checks. No claim is made that simulated data are field observations or that the prototype is an aerospace certification system.
 
 ## No claimed engineering authority
 900 MPa (demo LSL), 1.33 (demo target), process settings and scenario shifts are invented teaching choices. No technical standard is cited as their origin. A real study requires client-approved specifications, qualified testing and a validated sampling plan.

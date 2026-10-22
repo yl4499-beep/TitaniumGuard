@@ -1,4 +1,6 @@
-![](images/banner_thin.png)
+> Official reference snapshot. For current event requirements, consult the [original document](https://github.com/timothyfraser/sixsigmahackathon/blob/main/docs/schedule.md) and [Devpost](https://six-sigma-hackathon.devpost.com/). Project-specific scope is in [SPEC.md](../SPEC.md).
+
+![](https://raw.githubusercontent.com/timothyfraser/sixsigmahackathon/main/docs/images/banner_thin.png)
 
 ---
 
@@ -82,4 +84,4 @@ the same 0-100 [criteria](criteria.md) as the on-campus track.
 
 ---
 
-![](images/banner_icons.png)
+![](https://raw.githubusercontent.com/timothyfraser/sixsigmahackathon/main/docs/images/banner_icons.png)

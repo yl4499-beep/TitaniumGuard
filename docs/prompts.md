@@ -1,4 +1,6 @@
-![](images/banner_thin.png)
+> Official reference snapshot. For current event requirements, consult the [original document](https://github.com/timothyfraser/sixsigmahackathon/blob/main/docs/prompts.md) and [Devpost](https://six-sigma-hackathon.devpost.com/). Project-specific scope is in [SPEC.md](../SPEC.md).
+
+![](https://raw.githubusercontent.com/timothyfraser/sixsigmahackathon/main/docs/images/banner_thin.png)
 ---
 
 # 🗨️ Prompts
@@ -54,12 +56,12 @@ app you build is the delivery vehicle for the analysis, not the point.
 ### 📚 More
 
 - 🔢 [Evaluation Criteria](criteria.md)
-- 📚 [Resources for Building Your Tool](resources.md)
+- 📚 [Resources for Building Your Tool](https://github.com/timothyfraser/sixsigmahackathon/blob/main/docs/resources.md)
 - [🏠 Homepage](https://github.com/timothyfraser/sixsigmahackathon/tree/main)
 
 ---
 
-![](images/banner_icons.png)
+![](https://raw.githubusercontent.com/timothyfraser/sixsigmahackathon/main/docs/images/banner_icons.png)
 
 <p align="center">
   <b><a href="https://github.com/timothyfraser/sixsigmahackathon/tree/main">🏠 Return to Home Page</a></b>

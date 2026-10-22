@@ -1,53 +1,57 @@
-# Devpost submission draft — TitaniumGuard
-Submission copy for Yunkuan Liu. GitHub and live application links are verified below. Yunkuan Liu has confirmed that he personally reviewed the project. Individual-entry eligibility remains unverified. This draft does not claim that either Devpost or Canvas has been submitted.
+# Devpost project description — TitaniumGuard
+
+Copy the relevant sections into the matching Devpost fields. This file contains project copy, not a submission receipt. Upload the English-captioned demo to YouTube and enter its actual viewing URL in the video field. Account actions and eligibility are tracked in [ownership and submission status](OWNER_REVIEW.md).
 
 ## Project name
 TitaniumGuard
 
-## Project owner and participants
-- Project owner: **Yunkuan Liu**.
-- Sole human participant: **Yunkuan Liu**.
-- AI assistance: ChatGPT/Codex; it is not a team member.
-- Project name: TitaniumGuard. No separate registered team name is claimed.
-
-The event currently lists teams of 2–5. An organizer-approved individual-entry exception has not been verified. See [ownership and review status](OWNER_REVIEW.md).
-
 ## Elevator pitch
-A practical strength-monitoring workbench for titanium additive manufacturing: log test coupons, detect process shifts, and separate statistical stability from capability.
+Monitor titanium printing quality with frozen control charts, strength capability analysis, and build records.
+
+## Project owner
+Yunkuan Liu — sole human participant.
 
 ## Inspiration
-A contractor can pass many individual tests and still have an unreliable process. The DL aerospace-printing prompt asks for usable measurements as well as analysis. The project focuses on a quality engineer who needs to know whether a new build calls for investigation and whether an established process has enough margin above its strength requirement.
+The DL challenge describes an aerospace contractor whose printed titanium brackets fail strength tests. I focused on a practical question for a quality engineer: is the printing process changing, or is it consistent but too close to the minimum strength requirement? TitaniumGuard uses tensile-test coupons as a measure of process strength and keeps build conditions alongside the results for investigation.
 
 ## What it does
-TitaniumGuard accepts a simple CSV of build IDs, timestamps, coupon IDs and tensile strengths. Operators can also record a complete build in the interface. Optional oxygen readings, laser-power and scan-speed setpoints, powder lots and treatment IDs retain investigation context without requiring telemetry.
+TitaniumGuard is a web dashboard with a Python analysis API. Users can upload a CSV or log a complete build in the interface. The four required CSV columns are build ID, build time, specimen ID and strength in MPa. Optional fields include chamber oxygen, laser power, scan speed, powder lot, machine and heat treatment.
 
-The app constructs X-bar and R charts using a frozen reference period. It displays one-sided Cpl for minimum-strength requirements, or Cp/Cpk only when the customer really supplies both bounds. It keeps overall-SD performance indices separate from within-build capability indices. A process alert suppresses any current capability endorsement. The user can inspect build-level reasons and download the data and analysis. The Oxygen & build strength scatter plot relates each build's recorded oxygen reading to its mean coupon strength, with signal builds highlighted. It provides descriptive investigation context, not a causal model or a predictor of finished-part strength.
+The app estimates X-bar and R control limits from a reference period and keeps those limits fixed when checking later builds. It reports Cpl when only a minimum strength is specified, and Cp/Cpk when both specification limits are supplied. Overall-SD performance indices are reported separately. If the charts detect a process signal, a high historical baseline index does not endorse the current process.
+
+Users can inspect flagged builds, compare oxygen readings with build mean strength, and export CSV data and JSON analysis. The environmental plot provides descriptive clues for investigation; it does not establish a cause or predict finished-part strength. Records remain in the current browser tab until exported.
 
 ## How it was built
-A Python FastAPI service calls plain, framework-independent statistical functions. A lightweight browser interface renders the returned numbers; there is no separate frontend build or third-party chart CDN. The project adapts the official FastAPI starter and includes the course's local-run, manifest and deploy script structure.
+The project adapts the official FastAPI starter. Statistical functions in Python calculate the results, and a lightweight HTML/CSS/JavaScript interface displays them. The application is deployed on the course Posit Connect server through its Git integration.
 
-## Demonstration
-Three explicitly synthetic, reproducible datasets illustrate a stable process with a large strength margin, a planted mean shift beginning at build 26, and a stable process with insufficient strength margin. Each dataset has 40 builds with 5 distinct coupons per build. The sample LSL = 900 MPa and target = 1.33 are teaching inputs, not aerospace standards. See demo/README.md for measured outputs.
+ChatGPT/Codex assisted with design, implementation, synthetic data, tests and documentation. I have personally reviewed the project. The repository includes the data generator, a codebook, known-answer checks, boundary-case tests and source references.
 
 ## Challenges
-The main statistical challenge was preventing an abnormal monitoring period from contaminating its own control limits. Another was avoiding a misleading two-sided capability index when only a minimum strength matters. On the data side, the app rejects incomplete subgroups and duplicated coupon records instead of silently changing the study.
+A key challenge was keeping an abnormal monitoring period from changing its own control limits. Another was using the correct one-sided capability index for a minimum-strength requirement. Input validation also matters: incomplete subgroups, duplicate specimen IDs and invalid settings produce errors instead of silently changing the study.
 
-## Lessons from the project
-Stability and capability answer different questions. No observed rejection in a small sample proves neither long-term conformity nor suitability for flight. Environmental context helps structure an investigation, but an association between oxygen and a shift does not establish a cause.
+## Accomplishments
+The working prototype demonstrates three distinct outcomes using reproducible synthetic datasets: a stable process with a large strength margin, a mean shift beginning at build 26, and a stable process with insufficient margin. The verified test suite contains 109 tests: 71 numerical/schema tests and 38 API tests. The public application has also been checked against the recorded demonstration outputs.
+
+## What I learned
+The project highlights why stability and capability need to be considered separately. A process can have no control-chart signals and still have too little strength margin. Conversely, a high historical capability index cannot describe a process after a shift. The oxygen plot also illustrates why associated changes are a starting point for investigation rather than proof of causation.
+
+## Demonstration
+Each synthetic dataset contains 40 builds with 5 distinct coupons per build. The first 25 builds form the baseline. The example minimum of 900 MPa and target of 1.33 are teaching settings, not aerospace standards.
+
+- Stable process: baseline Cpl approximately 2.247; no flagged builds.
+- Mean shift: 15 flagged builds beginning at build 26; the historical baseline Cpl remains approximately 2.247.
+- Low margin: baseline Cpl approximately 0.418; no flagged builds.
+
+The 2 min 29 sec demo is a recording of the actual application running locally, with English captions and no audio. It shows the three scenarios, CSV import, complete-build entry, and CSV/JSON exports. Exact results are documented in [the walkthrough](../demo/README.md).
 
 ## What is next
-Validate measurement quality, the sampling plan, and coupon-to-bracket representativeness with the contractor. Add documented investigation and corrective-action records, then evaluate a new baseline after a verified improvement. A production version would require access control, audit history and qualified release procedures.
+The next step is to validate measurement quality, the sampling plan and coupon-to-bracket representativeness with a contractor. Further development could add investigation records, corrective-action tracking and persistent storage. This educational prototype supports process investigation; it does not authorize part release or certify airworthiness.
 
 ## Built with
-Python, FastAPI, JavaScript, HTML, CSS, pytest; deployed on course Posit Connect through its native Git integration.
+Python, FastAPI, JavaScript, HTML, CSS, pytest, Posit Connect, GitHub.
 
-## AI assistance
-Yunkuan Liu is the sole human project owner. ChatGPT/Codex assisted with design, code, synthetic datasets, tests and documentation, as encouraged by the event. Sources, automated checks and AI-assisted numerical cross-checks are recorded in the repository. Yunkuan Liu has personally reviewed the project. AI assistance is disclosed separately from his personal review.
+## Links
+- Public repository: https://github.com/yl4499-beep/TitaniumGuard
+- Live application: https://connect.systems-apps.com/content/4e02952e-c744-4f24-8791-463876e0bcb5/
 
-## Links to enter
-- Actual public GitHub repository: https://github.com/yl4499-beep/TitaniumGuard
-- Actual live Posit Connect application: https://connect.systems-apps.com/content/4e02952e-c744-4f24-8791-463876e0bcb5/
-- Demonstration video: a 2 min 29 sec preview with English captions and no audio has been produced from the actual application running locally. No public video-hosting URL or Devpost upload is claimed; see [preview details](DEMO_PREVIEW.md).
-
-## Submission status and Canvas follow-up
-This file is a draft; no Devpost submission has been completed. After submitting on Devpost, the official kickoff slide 10 also asks for the repository URL and Devpost project link on Canvas. Check the course assignment for its deadline and fields.
+Video upload instructions: [DEMO_PREVIEW.md](DEMO_PREVIEW.md). Enter the actual YouTube viewing URL in Devpost; the local MP4 filename is not a submission link.
