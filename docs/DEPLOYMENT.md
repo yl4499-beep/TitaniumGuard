@@ -53,4 +53,4 @@ The workflow checks a running deployment; it does not publish, create credential
 
 ## Remaining submission work
 
-Devpost and Canvas have **not** been submitted. The participant must supply the real team roster and truthful human-review details, complete the actual Devpost form, and submit the repository URL plus the resulting Devpost project link on Canvas as directed by [kickoff slide 10](https://timothyfraser.com/sigma/slides/40_slides_recitation_8.html#10). Check the actual Canvas assignment for its deadline and required fields.
+Devpost and Canvas have **not** been submitted. Yunkuan Liu is the sole human participant. Individual-entry eligibility and truthful personal-review details remain to be confirmed. He must complete the actual Devpost form, and submit the repository URL plus the resulting Devpost project link on Canvas as directed by [kickoff slide 10](https://timothyfraser.com/sigma/slides/40_slides_recitation_8.html#10). Check the actual Canvas assignment for its deadline and required fields.

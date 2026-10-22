@@ -1,14 +1,22 @@
 # Devpost submission draft — TitaniumGuard
-Use after reading the code and running the demonstrations. GitHub and live application links are verified below. Add the actual team and truthful human-review details before submission. Complete the account fields and participant review before final submission.
+Submission copy for Yunkuan Liu. GitHub and live application links are verified below. Personal review and individual-entry eligibility remain pending; complete them before final submission. This draft does not claim that either Devpost or Canvas has been submitted.
 
 ## Project name
 TitaniumGuard
+
+## Project owner and participants
+- Project owner: **Yunkuan Liu**.
+- Sole human participant: **Yunkuan Liu**.
+- AI assistance: ChatGPT/Codex; it is not a team member.
+- Project name: TitaniumGuard. No separate registered team name is claimed.
+
+The event currently lists teams of 2–5. An organizer-approved individual-entry exception has not been verified. See [ownership and review status](OWNER_REVIEW.md).
 
 ## Elevator pitch
 A practical strength-monitoring workbench for titanium additive manufacturing: log test coupons, detect process shifts, and separate statistical stability from capability.
 
 ## Inspiration
-A contractor can pass many individual tests and still have an unreliable process. The DL aerospace-printing prompt asks for usable measurements as well as analysis. We focused on a quality engineer who needs to know whether a new build calls for investigation and whether an established process has enough margin above its strength requirement.
+A contractor can pass many individual tests and still have an unreliable process. The DL aerospace-printing prompt asks for usable measurements as well as analysis. The project focuses on a quality engineer who needs to know whether a new build calls for investigation and whether an established process has enough margin above its strength requirement.
 
 ## What it does
 TitaniumGuard accepts a simple CSV of build IDs, timestamps, coupon IDs and tensile strengths. Operators can also record a complete build in the interface. Optional oxygen readings, laser-power and scan-speed setpoints, powder lots and treatment IDs retain investigation context without requiring telemetry.
@@ -22,9 +30,9 @@ A Python FastAPI service calls plain, framework-independent statistical function
 Three explicitly synthetic, reproducible datasets illustrate a stable process with a large strength margin, a planted mean shift beginning at build 26, and a stable process with insufficient strength margin. Each dataset has 40 builds with 5 distinct coupons per build. The sample LSL = 900 MPa and target = 1.33 are teaching inputs, not aerospace standards. See demo/README.md for measured outputs.
 
 ## Challenges
-The main statistical challenge was preventing an abnormal monitoring period from contaminating its own control limits. Another was avoiding a misleading two-sided capability index when only a minimum strength matters. On the data side, we reject incomplete subgroups and duplicated coupon records instead of silently changing the study.
+The main statistical challenge was preventing an abnormal monitoring period from contaminating its own control limits. Another was avoiding a misleading two-sided capability index when only a minimum strength matters. On the data side, the app rejects incomplete subgroups and duplicated coupon records instead of silently changing the study.
 
-## What we learned
+## Lessons from the project
 Stability and capability answer different questions. No observed rejection in a small sample proves neither long-term conformity nor suitability for flight. Environmental context helps structure an investigation, but an association between oxygen and a shift does not establish a cause.
 
 ## What is next
@@ -34,7 +42,7 @@ Validate measurement quality, the sampling plan, and coupon-to-bracket represent
 Python, FastAPI, JavaScript, HTML, CSS, pytest; deployed on course Posit Connect through its native Git integration.
 
 ## AI assistance
-ChatGPT/Codex assisted with design, code, synthetic datasets, tests and documentation, as encouraged by the event. Sources, automated checks and recorded independent numerical cross-checks are included. Participant review must still be completed before final submission.
+Yunkuan Liu is the sole human project owner. ChatGPT/Codex assisted with design, code, synthetic datasets, tests and documentation, as encouraged by the event. Sources, automated checks and AI-assisted numerical cross-checks are recorded in the repository. These checks are not presented as Yunkuan Liu’s personal review. His review of the code, methods and demonstration outputs remains pending; only work actually reviewed should be described as personally checked.
 
 ## Links to enter
 - Actual public GitHub repository: https://github.com/yl4499-beep/TitaniumGuard

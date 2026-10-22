@@ -1,12 +1,12 @@
 # Build plan
-- H-01: SPEC.md; known-answer arithmetic and scope fixed. Team/repo/live URL intentionally pending.
-- H-02: data/; 3 seeded CSVs + codebook; verify 40 x5, timestamps and planted shift at26.
+- H-01: SPEC.md; known-answer arithmetic and scope fixed. Yunkuan Liu is the sole human owner; public repository and live application are verified. Individual-entry eligibility and personal review remain pending.
+- H-02: data/; 3 seeded CSVs + codebook; verify 40 × 5, timestamps and planted shift at build 26.
 - H-03: app/qc.py, tests/, requirements; hand fixture and degenerate inputs; independent stats review.
 - H-04: app/; official FastAPI starter + same-origin dashboard; API matches core, upload/log/export usable.
-- H-05: demo/; exact results and walkthrough for all3 datasets; browser interaction checks.
-- H-06: deployment scripts, committed manifest and optional official CI; actual deploy requires course credentials.
+- H-05: demo/; exact results and walkthrough for all 3 datasets; browser interaction checks.
+- H-06: deployment scripts, committed manifest and optional official CI; native Git deployment to course Posit Connect completed; anonymous live checks passed.
 - H-07: README and docs/; English presentation, submission copy, Chinese explanation, sources and honest status.
-- H-08: gitignore; complete source archive; public GitHub and actual Devpost entry require user's account.
+- H-08: gitignore; complete source archive; public GitHub is available; actual Devpost and Canvas submissions remain pending.
 
 ## Formulas
 Xbar_i=sum(x_ij)/n; R_i=max(x_ij)-min(x_ij).
@@ -21,7 +21,7 @@ Control signals: one beyond 3sigma; Xbar8 on same side, alert at eighth. No retr
 User asked for full project and prioritizes easiest robust score. Choose official DL 3D Printing prompt.
 Product name TitaniumGuard; do not invent registered team name.
 Python for analysis; no telemetry, cloud database or frontend build required.
-One-sided strength limit default; invented demo LSL900 and target1.33, not engineering specifications.
-Baseline25 builds; 40 builds per demo, size5. Optional covariates logged at build level.
+One-sided strength limit default; invented demo LSL = 900 MPa and target = 1.33, not engineering specifications.
+Baseline 25 builds; 40 builds per demo, size 5. Optional covariates logged at build level.
 Use descriptive covariate display only. No causal/predictive claims.
 Use independent stats-reviewer after implementation as the official workflow requests.

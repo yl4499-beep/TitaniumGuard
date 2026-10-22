@@ -12,7 +12,7 @@ Accessed 2026-10-20 UTC. Sources ground requirements and formulas; all example o
 9. Posit Connect publishing documentation: https://docs.posit.co/connect/user/publishing-cli-apps/ and https://docs.posit.co/rsconnect-python/ . Intended course deployment route.
 
 ## AI use disclosure
-OpenAI ChatGPT/Codex assisted with project design, synthetic data generation, Python implementation, tests, interface and documentation. The statistics were checked against independently computed known answers and boundary cases; verification results are recorded in demo/. The participant must review the code and be able to explain the methods. No claim is made that simulated data are field observations or that the prototype is an aerospace certification system.
+**Yunkuan Liu is the project owner and sole human participant.** OpenAI ChatGPT/Codex assisted with project design, synthetic data generation, Python implementation, tests, interface and documentation. The statistics were checked against independently computed known answers and boundary cases; verification results are recorded in demo/. Yunkuan Liu must personally review the code and be able to explain the methods. Automated tests and AI-assisted cross-checks do not constitute his personal review; its completion has not been claimed. No claim is made that simulated data are field observations or that the prototype is an aerospace certification system.
 
 ## No claimed engineering authority
 900 MPa (demo LSL), 1.33 (demo target), process settings and scenario shifts are invented teaching choices. No technical standard is cited as their origin. A real study requires client-approved specifications, qualified testing and a validated sampling plan.

@@ -1,12 +1,19 @@
 spec: SPEC.md
-updated: '2026-10-21'
+updated: '2026-10-22'
+project_owner: Yunkuan Liu
+human_participants:
+- Yunkuan Liu
+ai_assistance: ChatGPT/Codex
+ownership_note: Current task ownership identifies the accountable human project owner.
+  historical_executor records earlier AI execution; ownership does not certify personal review.
 tasks:
 - id: H-01
   title: Fill in every FILL IN line in SPEC.md
   points: '15 - Tool Design: scope matches a prompt (5), clear user and use case (5),
     minimal inputs (5)'
   status: done
-  owner: Codex
+  owner: Yunkuan Liu
+  historical_executor: Codex
   started_at: '2026-10-20'
   owns:
   - SPEC.md
@@ -19,14 +26,15 @@ tasks:
     sentence in SPEC section 4 without reading it.
 
     '
-  result: SPEC contains zero unfilled technical fields; actual team and publishing
-    URLs explicitly pending, not invented.
+  result: SPEC contains zero unfilled technical fields; project owner Yunkuan Liu and verified public links
+    recorded. Individual-entry eligibility and personal review remain pending.
 - id: H-02
   title: Two or three test datasets plus a codebook
   points: '10 - Tool Documentation: 2-3 working test datasets (5), codebook and README
     for the data (5)'
   status: done
-  owner: Codex
+  owner: Yunkuan Liu
+  historical_executor: Codex
   started_at: '2026-10-20'
   owns:
   - data/
@@ -42,7 +50,8 @@ tasks:
   points: '25 - Tool Implementation: valid analyses relevant to quality control in
     R or Python'
   status: done
-  owner: Codex audit
+  owner: Yunkuan Liu
+  historical_executor: Codex audit
   started_at: '2026-10-20'
   owns:
   - app/qc.py
@@ -64,7 +73,8 @@ tasks:
   title: Working tool - one demo copied to app/ and wired to the H-03 function
   points: '25 - Tool Implementation: an effective, working tool (does it run?)'
   status: done
-  owner: Codex audit
+  owner: Yunkuan Liu
+  historical_executor: Codex audit
   started_at: '2026-10-20'
   owns:
   - app/
@@ -84,7 +94,8 @@ tasks:
   title: Demonstration of the tool on every test dataset
   points: '10 - Tool Design: a clear demonstration of the tool, using test datasets'
   status: done
-  owner: Codex
+  owner: Yunkuan Liu
+  historical_executor: Codex
   started_at: '2026-10-20'
   owns:
   - demo/
@@ -94,13 +105,14 @@ tasks:
     to read this"; a teammate who did not write it follows it and gets the same numbers.
 
     '
-  result: All3 datasets demonstrated through actual API/UI; exact JSON and narrative
+  result: All 3 datasets demonstrated through actual API/UI; exact JSON and narrative
     outputs; self-contained read-only preview switches correctly.
 - id: H-06
   title: Deploy to the course Posit Connect server
   points: protects the 25 working-tool points - judges must be able to open it
   status: done
-  owner: Codex
+  owner: Yunkuan Liu
+  historical_executor: Codex
   started_at: '2026-10-20'
   owns:
   - .github/workflows/
@@ -122,7 +134,8 @@ tasks:
   title: README and function documentation
   points: '10 - Tool Documentation: excellent, easy-to-follow documentation'
   status: blocked
-  owner: Codex
+  owner: Yunkuan Liu
+  historical_executor: Codex
   started_at: '2026-10-20'
   owns:
   - README.md
@@ -132,9 +145,10 @@ tasks:
   - data/README.md
   - demo/README.md
   - demo/run_demo.py
-  notes: User requested review fixes: improve documentation spacing and test counts,
+  notes: >-
+    User requested review fixes: improve documentation spacing and test counts,
     remove the Devpost placeholder, document the existing oxygen scatter plot, and
-    add screenshots and the available video preview. Actual team review remains pending.
+    add screenshots and the available video preview. Yunkuan Liu's personal review remains pending.
   definition_of_done: 'README.md says what the tool does, for whom, every input and
     parameter, how each function or endpoint works, how to run it in one command,
     the live URL, and links demo/README.md. A teammate who did not write the code
@@ -145,12 +159,13 @@ tasks:
     into 71 numerical/schema plus 38 API tests; Devpost placeholder removed without
     inventing human review; actual overview and existing oxygen-scatter screenshots;
     2:29 captioned video preview documented. Fixture JSON stayed byte-identical,
-    release checks and local links passed. Actual human/team review remains pending.'
+    release checks and local links passed. Yunkuan Liu''s personal review remains pending.'
 - id: H-08
   title: Reproducible public repo, submitted on Devpost
   points: '5 - Tool Documentation: fully reproducible code, posted publicly to GitHub'
   status: blocked
-  owner: Codex
+  owner: Yunkuan Liu
+  historical_executor: Codex
   started_at: '2026-10-20'
   owns:
   - .gitignore
@@ -167,4 +182,29 @@ tasks:
     '
   result: 'Published all 123 source files to yl4499-beep/TitaniumGuard on 2026-10-21
     in commit 00622df. GitHub verification run 39548738151 passed. Public clone
-    succeeded. Devpost submission and real team information remain pending.'
+    succeeded. The sole human owner is now confirmed as Yunkuan Liu; individual-entry
+    eligibility, personal review, Devpost and Canvas submission remain pending.'
+
+- id: H-09
+  title: Reconcile review feedback and identify the sole human project owner
+  status: done
+  owner: Yunkuan Liu
+  assisted_by: Codex
+  started_at: '2026-10-22'
+  owns:
+  - SPEC.md
+  - CONTRACT.yaml
+  - README.md
+  - docs/
+  notes: User authorized another review pass and identified Yunkuan Liu as the sole
+    project owner. Preserve AI attribution and real Git history. Do not invent
+    teammates, personal review, an individual-entry exception or final submission.
+  definition_of_done: Documentation identifies one human owner consistently; no stale
+    missing-roster or missing-video claim remains in current submission guides;
+    review checklist records pending human actions; release checks and unchanged
+    application/fixture comparisons pass.
+  result: '109 tests passed with 1 third-party deprecation warning; release check
+    passed 20 checksums and 3 dataset mirrors; 29 local documentation links passed.
+    Owner and sole human participant recorded as Yunkuan Liu. Application, datasets
+    and result fixtures unchanged. Personal review, individual-entry eligibility
+    and Devpost/Canvas submission remain pending.'

@@ -2,7 +2,9 @@
 
 ## 1. Team and prompt
 - Project name: TitaniumGuard (working product name, not a registered team name).
-- Team name / roster: not supplied; the participant must enter their actual team on Devpost.
+- Project owner and sole human participant: **Yunkuan Liu**, confirmed by the user on 2026-10-22.
+- AI assistance: ChatGPT/Codex; not a human teammate.
+- No separate registered team name has been supplied. The official event lists teams of 2–5; approval for an individual entry has not been verified. Record only actual participants in Devpost.
 - Track: Virtual DL Challenge, 7 days.
 - Official prompt: DL Industrial Systems — **3D Printing for Aerospace** (the website gives no number).
 - Prompt source: https://six-sigma-hackathon.devpost.com/ (retrieved 2026-10-20 UTC).

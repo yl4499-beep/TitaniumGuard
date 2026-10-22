@@ -1,6 +1,8 @@
 # TitaniumGuard
 **Cornell Six Sigma Hackathon · Virtual DL · 3D Printing for Aerospace**
 
+**Project owner and sole human participant: Yunkuan Liu.** Built with ChatGPT/Codex assistance; see [ownership, review and submission status](docs/OWNER_REVIEW.md).
+
 **[Open the live application](https://connect.systems-apps.com/content/4e02952e-c744-4f24-8791-463876e0bcb5/)** · Public access, no login required.
 
 A quality engineer's workbench for titanium coupon-strength monitoring. Log builds, freeze a reference baseline, detect process shifts, and compare baseline strength margin with an engineering requirement. A transparent statistical core powers a same-origin browser interface.
@@ -108,7 +110,7 @@ GitHub Actions separates two checks:
 The original official API-key deployment template remains available through **manual workflow dispatch only**. Do not run it alongside the native Git publisher: its name-based target may create a different app. It requires the two repository secrets and a deliberately reviewed migration/target. The earlier failed run is retained as history; the actual live deployment used Connect's Git integration.
 
 Remaining submission steps:
-1. Enter the actual team name/members and truthfully describe the team's review in [DEVPOST_DRAFT](docs/DEVPOST_DRAFT.md).
+1. Use **Yunkuan Liu** as the project owner and sole actual participant. Confirm individual-entry eligibility with the organizer: the published event requires 2–5 members, and no exception has been verified. Complete the [personal review checklist](docs/OWNER_REVIEW.md) before making a human-review claim in [DEVPOST_DRAFT](docs/DEVPOST_DRAFT.md).
 2. Submit the GitHub and live application links on Devpost. Include the working demonstration. A captioned preview now exists in the export bundle; check the actual Devpost form for its video field and accepted hosting format before uploading it.
 3. The [official kickoff slides, slide 10](https://timothyfraser.com/sigma/slides/40_slides_recitation_8.html#10) also direct students to submit the **repository URL and Devpost project link on Canvas**. Check the actual Canvas assignment's deadline and upload fields.
 
