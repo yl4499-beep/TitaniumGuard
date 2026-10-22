@@ -11,7 +11,7 @@ A quality engineer's workbench for titanium coupon-strength monitoring. Log buil
 
 *Actual application screenshot with synthetic demonstration data; captured from the same application code used by the live deployment.*
 
-**Demo materials:** [three-scenario walkthrough](demo/README.md) · [English speaking script](docs/PITCH.md) · [video-preview details](docs/DEMO_PREVIEW.md). A 2 min 29 sec Chinese-captioned, silent screen recording is included in the downloadable project export; a public video-hosting link and Devpost submission have not been created.
+**Demo materials:** [three-scenario walkthrough](demo/README.md) · [English speaking script](docs/PITCH.md) · [video-preview details](docs/DEMO_PREVIEW.md). A 2 min 29 sec English-captioned, silent screen recording is available separately as `TitaniumGuard_Demo_EN.mp4`; a public video-hosting link and Devpost submission have not been created.
 
 ## Start in one command
 Requires Python 3.12, a terminal and internet for the first dependency installation. Unzip/open the project folder, then:
@@ -110,8 +110,8 @@ GitHub Actions separates two checks:
 The original official API-key deployment template remains available through **manual workflow dispatch only**. Do not run it alongside the native Git publisher: its name-based target may create a different app. It requires the two repository secrets and a deliberately reviewed migration/target. The earlier failed run is retained as history; the actual live deployment used Connect's Git integration.
 
 Remaining submission steps:
-1. Use **Yunkuan Liu** as the project owner and sole actual participant. Confirm individual-entry eligibility with the organizer: the published event requires 2–5 members, and no exception has been verified. Complete the [personal review checklist](docs/OWNER_REVIEW.md) before making a human-review claim in [DEVPOST_DRAFT](docs/DEVPOST_DRAFT.md).
-2. Submit the GitHub and live application links on Devpost. Include the working demonstration. A captioned preview now exists in the export bundle; check the actual Devpost form for its video field and accepted hosting format before uploading it.
+1. Use **Yunkuan Liu** as the project owner and sole actual participant. Confirm individual-entry eligibility with the organizer: the published event requires 2–5 members, and no exception has been verified. Yunkuan Liu has confirmed his [personal review](docs/OWNER_REVIEW.md), as recorded in [DEVPOST_DRAFT](docs/DEVPOST_DRAFT.md).
+2. Submit the GitHub and live application links on Devpost. Include the working demonstration. An English-captioned preview is available separately; check the actual Devpost form for its video field and accepted hosting format before uploading it.
 3. The [official kickoff slides, slide 10](https://timothyfraser.com/sigma/slides/40_slides_recitation_8.html#10) also direct students to submit the **repository URL and Devpost project link on Canvas**. Check the actual Canvas assignment's deadline and upload fields.
 
 The published DL schedule lists October 23, 2026, 3 PM Eastern. Devpost and Canvas submission are still pending; deployment alone does not submit either one.

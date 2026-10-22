@@ -1,6 +1,6 @@
 # Demonstration preview
 
-A **2 min 29 sec** screen recording has been produced from the actual TitaniumGuard application running locally. The application code matches the deployed prototype. It has Chinese captions, a visible cursor and highlighted controls, **with no audio**. The complete project export includes `Demo_Video/TitaniumGuard_Demo_Preview_ZH.mp4` outside the source-code folder.
+A **2 min 29 sec** screen recording has been produced from the actual TitaniumGuard application running locally. The application code matches the deployed prototype. It has English captions, a visible cursor and highlighted controls, **with no audio**. The English-captioned recording is named `TitaniumGuard_Demo_EN.mp4` and is provided separately from the source-code repository.
 
 This preview has not been uploaded to Devpost or a public video host. It is separate from the read-only `demo/TitaniumGuard_Demo.html` and from the English [speaking script](PITCH.md). A submitted video URL must point to the actual hosted recording; do not paste a local file path into Devpost.
 

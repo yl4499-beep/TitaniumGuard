@@ -1,5 +1,5 @@
 # Devpost submission draft — TitaniumGuard
-Submission copy for Yunkuan Liu. GitHub and live application links are verified below. Personal review and individual-entry eligibility remain pending; complete them before final submission. This draft does not claim that either Devpost or Canvas has been submitted.
+Submission copy for Yunkuan Liu. GitHub and live application links are verified below. Yunkuan Liu has confirmed that he personally reviewed the project. Individual-entry eligibility remains unverified. This draft does not claim that either Devpost or Canvas has been submitted.
 
 ## Project name
 TitaniumGuard
@@ -42,12 +42,12 @@ Validate measurement quality, the sampling plan, and coupon-to-bracket represent
 Python, FastAPI, JavaScript, HTML, CSS, pytest; deployed on course Posit Connect through its native Git integration.
 
 ## AI assistance
-Yunkuan Liu is the sole human project owner. ChatGPT/Codex assisted with design, code, synthetic datasets, tests and documentation, as encouraged by the event. Sources, automated checks and AI-assisted numerical cross-checks are recorded in the repository. These checks are not presented as Yunkuan Liu’s personal review. His review of the code, methods and demonstration outputs remains pending; only work actually reviewed should be described as personally checked.
+Yunkuan Liu is the sole human project owner. ChatGPT/Codex assisted with design, code, synthetic datasets, tests and documentation, as encouraged by the event. Sources, automated checks and AI-assisted numerical cross-checks are recorded in the repository. Yunkuan Liu has personally reviewed the project. AI assistance is disclosed separately from his personal review.
 
 ## Links to enter
 - Actual public GitHub repository: https://github.com/yl4499-beep/TitaniumGuard
 - Actual live Posit Connect application: https://connect.systems-apps.com/content/4e02952e-c744-4f24-8791-463876e0bcb5/
-- Demonstration video: a 2 min 29 sec preview with Chinese captions and no audio has been produced from the actual application running locally. It is included in the complete export bundle. No public video-hosting URL or Devpost upload is claimed; see [preview details](DEMO_PREVIEW.md).
+- Demonstration video: a 2 min 29 sec preview with English captions and no audio has been produced from the actual application running locally. No public video-hosting URL or Devpost upload is claimed; see [preview details](DEMO_PREVIEW.md).
 
 ## Submission status and Canvas follow-up
 This file is a draft; no Devpost submission has been completed. After submitting on Devpost, the official kickoff slide 10 also asks for the repository URL and Devpost project link on Canvas. Check the course assignment for its deadline and fields.

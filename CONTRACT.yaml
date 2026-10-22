@@ -208,3 +208,18 @@ tasks:
     Owner and sole human participant recorded as Yunkuan Liu. Application, datasets
     and result fixtures unchanged. Personal review, individual-entry eligibility
     and Devpost/Canvas submission remain pending.'
+
+- id: H-10
+  title: Record confirmed personal review and English demo captions
+  status: done
+  owner: Yunkuan Liu
+  assisted_by: Codex
+  started_at: '2026-10-22'
+  owns:
+  - CONTRACT.yaml
+  - README.md
+  - docs/DEVPOST_DRAFT.md
+  - docs/DEMO_PREVIEW.md
+  - docs/OWNER_REVIEW.md
+  definition_of_done: Submission draft records the owner's confirmed review, retains AI attribution, and contains no Chinese-caption references; video and ownership details agree.
+  result: 'PASS: confirmed personal review and AI attribution present; three submission documents contain no Chinese text or obsolete caption references; English video filename and duration agree. This confirmation supersedes earlier pending-review notes. Application code and final submission status unchanged.'
