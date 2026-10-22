@@ -1,6 +1,6 @@
 # Demonstration — exact computed results
 
-Run from the project root: `python demo/run_demo.py`. These results use the supplied synthetic fixtures, baseline25, LSL900MPa, no USL and target1.33. All example values and study settings are invented.
+Run from the project root: `python demo/run_demo.py`. These results use the supplied synthetic fixtures, baseline = 25, LSL = 900 MPa, no USL and target = 1.33. All example values and study settings are invented.
 
 | Dataset | Status | Baseline Cpl | Baseline Ppl | Flagged builds | Monitoring nonconforming |
 |---|---|---:|---:|---:|---:|
@@ -8,14 +8,17 @@ Run from the project root: `python demo/run_demo.py`. These results use the supp
 | mean_shift.csv | process_shift | 2.246761 | 2.444170 | 15 | 52/75 |
 | stable_incapable.csv | below_target | 0.418036 | 0.454766 | 0 | 10/75 |
 
+## Demo preview
+A 2 min 29 sec Chinese-captioned, silent recording of the actual local application is included in the complete export bundle. See [preview details](../docs/DEMO_PREVIEW.md) and the [English speaking script](../docs/PITCH.md). A video-hosting URL and Devpost upload remain pending.
+
 ## Frozen reference limits
-Both stable_capable and mean_shift share the identical baseline. Mean=1001.919120MPa; R-bar=35.171200MPa; within sigma=15.120894MPa; overall SD=13.899620MPa.
-X-bar LCL=981.625338, UCL=1022.212902MPa. R LCL=0.000000, UCL=74.387088MPa.
+Both stable_capable and mean_shift share the identical baseline. Mean=1001.919120 MPa; R-bar=35.171200 MPa; within sigma=15.120894 MPa; overall SD=13.899620 MPa.
+X-bar LCL=981.625338, UCL=1022.212902 MPa. R LCL=0.000000, UCL=74.387088 MPa.
 
 ## Browser walkthrough
 1. Start `bash app/testme.sh`; open the printed local URL. Load **Stable process**. Inspect R then X-bar, historical baseline Cpl and observed nonconformance. No detected signal is not proof of normality or adequacy of the measurement plan.
-2. Load **Mean shift**. Verify B026 is the first flagged build, B026–B040 are flagged, and limits remain identical. The historical Cpl remains high; the current process status correctly calls for investigation. Inspect the oxygen plot and say “association, not a proven cause.”
-3. Load **Low margin**. The study is not signaling a change, but Cpl is below1.33. This separates predictable variation from adequate strength margin.
+2. Load **Mean shift**. Verify B026 is the first flagged build, B026–B040 are flagged, and limits remain identical. The historical Cpl remains high; the current process status correctly calls for investigation. Scroll below the control charts to **Oxygen & build strength**. The scatter plot maps oxygen (ppm) to build mean strength (MPa); 40 points represent 40 builds and the 15 signal builds are red. Say “association, not a proven cause.”
+3. Load **Low margin**. The study is not signaling a change, but Cpl is below 1.33. This separates predictable variation from adequate strength margin.
 4. Upload one CSV from data/ to reproduce the same output. Try an invalid file: it should give a specific validation error, not partial results.
 5. Log a complete new build with the same subgroup size and later timestamp, then download the updated CSV. Only browser-session memory holds edits until exported.
 6. Download the JSON report, inspect the method notes and open `/docs` for the API interface.

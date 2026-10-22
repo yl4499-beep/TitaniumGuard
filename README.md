@@ -5,8 +5,14 @@
 
 A quality engineer's workbench for titanium coupon-strength monitoring. Log builds, freeze a reference baseline, detect process shifts, and compare baseline strength margin with an engineering requirement. A transparent statistical core powers a same-origin browser interface.
 
+![TitaniumGuard application showing the stable-process scenario, Cpl 2.247, no control signals and 200 coupons](docs/images/application-overview.png)
+
+*Actual application screenshot with synthetic demonstration data; captured from the same application code used by the live deployment.*
+
+**Demo materials:** [three-scenario walkthrough](demo/README.md) · [English speaking script](docs/PITCH.md) · [video-preview details](docs/DEMO_PREVIEW.md). A 2 min 29 sec Chinese-captioned, silent screen recording is included in the downloadable project export; a public video-hosting link and Devpost submission have not been created.
+
 ## Start in one command
-Requires Python3.12, a terminal and internet for the first dependency installation. Unzip/open the project folder, then:
+Requires Python 3.12, a terminal and internet for the first dependency installation. Unzip/open the project folder, then:
 ```bash
 bash app/testme.sh
 ```
@@ -26,31 +32,40 @@ Four columns are required:
 | Column | Meaning |
 |---|---|
 | build_id | One build/rational subgroup; rows must be contiguous |
-| build_time | ISO8601 timestamp, identical within a build and increasing between builds |
+| build_time | ISO 8601 timestamp, identical within a build and increasing between builds |
 | specimen_id | Unique independent destructive-test coupon identifier |
 | strength_mpa | Positive finite ultimate tensile strength in MPa |
 
-Optional build-level fields: machine_id, powder_lot, oxygen_ppm, laser_power_w, scan_speed_mm_s, heat_treatment, notes. Unknown CSV columns and JSON record fields are rejected, so a misspelled field cannot silently disappear. Identifiers and text metadata must be strings. LF, CRLF and CR line endings are accepted. Equal subgroup size2–10 is required; demos use5. Supplied metadata must be consistent within a build. Mixed machines or heat-treatment routes are rejected. The detailed [codebook and real collection protocol](data/README.md) explains what technicians can record without telemetry and what a real qualified study additionally requires.
+Optional build-level fields: machine_id, powder_lot, oxygen_ppm, laser_power_w, scan_speed_mm_s, heat_treatment, notes. Unknown CSV columns and JSON record fields are rejected, so a misspelled field cannot silently disappear. Identifiers and text metadata must be strings. LF, CRLF and CR line endings are accepted. Equal subgroup size 2–10 is required; demos use 5. Supplied metadata must be consistent within a build. Mixed machines or heat-treatment routes are rejected. The detailed [codebook and real collection protocol](data/README.md) explains what technicians can record without telemetry and what a real qualified study additionally requires.
 
 ## Statistics and interpretation
-The first B builds estimate frozen Xbar/R limits using rounded NIST A2,D3,D4 constants. Within-subgroup sigma is Rbar/d2. The app flags a mean/range outside its3-sigma limits and the eighth and subsequent Xbar points strictly on one side of the center; it does not claim to implement every Western Electric rule.
+The first B builds estimate frozen Xbar/R limits using rounded NIST A2, D3, D4 constants. Within-subgroup sigma is Rbar/d2. The app flags a mean/range outside its 3-sigma limits and the eighth and subsequent Xbar points strictly on one side of the center; it does not claim to implement every Western Electric rule.
 
 - Minimum-only strength specification: **Cpl**, `(baseline_mean-LSL)/(3*within_sigma)`.
-- Actual two-sided specification: also Cp,Cpu,Cpk; Cpk is the worse side.
-- Ppl/Ppu/Pp/Ppk substitute baseline sample SD (ddof1) and are labeled as overall performance.
+- Actual two-sided specification: also Cp, Cpu, Cpk; Cpk is the worse side.
+- Ppl/Ppu/Pp/Ppk substitute baseline sample SD (ddof = 1) and are labeled as overall performance.
 - Reported capability and performance estimates are from the historical baseline only. Observed nonconformance is separately counted for baseline, monitoring and all coupons.
-- Baseline instability, monitoring signals or fewer than25 baseline builds prevent a qualified target assessment. The25-build threshold is an explicit prototype study policy, not a universal certification standard.
+- Baseline instability, monitoring signals or fewer than 25 baseline builds prevent a qualified target assessment. The 25-build threshold is an explicit prototype study policy, not a universal certification standard.
 - A baseline Q-Q plot supports visual normality review. Approximate normality, independent and representative samples, rational subgrouping and measurement adequacy remain assumptions requiring engineering review.
 
 The app never estimates specifications from the observations, drops incomplete rows silently, normalizes a shift by recalculating limits, or predicts defect rates from an unstable process. Zero variation and malformed records produce clear errors.
 
+## Environmental context and the aerospace prompt
+The full application already includes an **Oxygen & build strength scatter plot**, below the X-bar/R charts and beside the baseline Q-Q plot. Its x-axis is recorded chamber oxygen (ppm); its y-axis is mean coupon strength per build (MPa). Each point is one build, with control-signal builds colored red. Hovering identifies the build and its coordinates. Missing oxygen readings are omitted from this plot only; they do not remove strength records from the analysis.
+
+![Actual oxygen-versus-mean-strength scatter plot for the synthetic mean-shift scenario](docs/images/oxygen-strength-scatter.png)
+
+In `mean_shift.csv`, the 25 baseline builds form a higher-strength/lower-oxygen cluster and the 15 monitoring builds form a lower-strength/higher-oxygen cluster. Both changes were planted together in the synthetic generator. This is descriptive association, **not evidence that oxygen caused a strength change**. No correlation coefficient, regression significance or causal prediction is claimed. Laser power and scan speed remain recorded context; they are not fitted predictors. Coupon ultimate tensile strength is a process-quality proxy, not a finished-bracket load test or fatigue-life model.
+
+This makes the environment/strength relationship visible while keeping the analysis within what the data support. A real investigation would review oxygen measurement, material lot, recipe and post-processing together, then validate a proposed cause in a designed study.
+
 ## Three demonstration fixtures
-All observations are synthetic. LSL900MPa and target1.33 are illustrative choices, not aviation/material standards. Seed42 was selected for clean contrasting demonstrations; this is disclosed in the codebook.
+All observations are synthetic. LSL = 900 MPa and target = 1.33 are illustrative choices, not aviation/material standards. Seed 42 was selected for clean contrasting demonstrations; this is disclosed in the codebook.
 
 | File | What to show | Historical baseline Cpl | Monitoring nonconforming |
 |---|---|---:|---:|
 | stable_capable.csv | No detected shift; baseline target met |2.246761|0/75|
-| mean_shift.csv | Mean drops from B026;15 builds flagged |2.246761|52/75|
+| mean_shift.csv | Mean drops from B026; 15 builds flagged |2.246761|52/75|
 | stable_incapable.csv | No detected shift; inadequate margin |0.418036|10/75|
 
 The high baseline Cpl in the second row does **not** describe the changed process. Full computed values and the step-by-step demo are in [demo/README.md](demo/README.md).
@@ -63,7 +78,7 @@ The high baseline Cpl in the second row does **not** describe the changed proces
 .venv/bin/python demo/run_demo.py
 .venv/bin/python demo/build_preview.py
 ```
-The core has71 numerical and validation tests; expanded API integration checks cover strict inputs, error responses and locally served documentation. Run the test command for the current total. An independent read-only review recomputed the hand fixture, the C/P estimators, frozen-baseline behavior, run logic and invalid inputs. See [review evidence](demo/STATISTICS_REVIEW.md). No scoring claim or external accreditation is made.
+The last verified full suite passed **109 tests**: **71 numerical/schema tests** under `tests/` plus **38 API tests** in `app/test_api.py`. API checks cover strict inputs, error responses and locally served documentation. See the [successful verification run](https://github.com/yl4499-beep/TitaniumGuard/actions/runs/39697302948); run the command above to verify your checkout. An independent read-only review recomputed the hand fixture, the C/P estimators, frozen-baseline behavior, run logic and invalid inputs. See [review evidence](demo/STATISTICS_REVIEW.md). No scoring claim or external accreditation is made.
 
 `data/generate.py` is the authoritative generator. Before publishing changes to the data, copy the three generated CSVs to `app/sample_data/`, rerun tests and regenerate the deployment manifest. The packaged copies are identical.
 
@@ -74,7 +89,7 @@ The core has71 numerical and validation tests; expanded API integration checks c
 - `GET /health`: application health/version.
 - `GET /api/datasets`: three synthetic dataset descriptions.
 - `GET /api/datasets/{name}`: CSV demonstration.
-- `POST /api/analyze`: exactly one of `csv_text` or `records`, plus lsl, optional usl, integer baseline_builds and target. Validation failure returns422. Prototype limit20,000 records.
+- `POST /api/analyze`: exactly one of `csv_text` or `records`, plus lsl, optional usl, integer baseline_builds and target. Validation failure returns HTTP 422. Prototype limit 20,000 records.
 - `GET /docs`: interactive API documentation.
 
 [App README](app/README.md) provides request examples and launch details.
@@ -94,7 +109,7 @@ The original official API-key deployment template remains available through **ma
 
 Remaining submission steps:
 1. Enter the actual team name/members and truthfully describe the team's review in [DEVPOST_DRAFT](docs/DEVPOST_DRAFT.md).
-2. Submit the GitHub and live application links on Devpost. Add a demo recording only if the actual submission form requires it; no recording is claimed here.
+2. Submit the GitHub and live application links on Devpost. Include the working demonstration. A captioned preview now exists in the export bundle; check the actual Devpost form for its video field and accepted hosting format before uploading it.
 3. The [official kickoff slides, slide 10](https://timothyfraser.com/sigma/slides/40_slides_recitation_8.html#10) also direct students to submit the **repository URL and Devpost project link on Canvas**. Check the actual Canvas assignment's deadline and upload fields.
 
 The published DL schedule lists October 23, 2026, 3 PM Eastern. Devpost and Canvas submission are still pending; deployment alone does not submit either one.

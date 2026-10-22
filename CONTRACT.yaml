@@ -128,17 +128,24 @@ tasks:
   - README.md
   - app/README.md
   - docs/
-  notes: Documentation and submission package authorized by the user; live URL and
-    deployment evidence are now documented. Actual team review remains pending.
+  - app/manifest.json
+  - data/README.md
+  - demo/README.md
+  - demo/run_demo.py
+  notes: User requested review fixes: improve documentation spacing and test counts,
+    remove the Devpost placeholder, document the existing oxygen scatter plot, and
+    add screenshots and the available video preview. Actual team review remains pending.
   definition_of_done: 'README.md says what the tool does, for whom, every input and
     parameter, how each function or endpoint works, how to run it in one command,
     the live URL, and links demo/README.md. A teammate who did not write the code
     follows it from a fresh clone and it works.
 
     '
-  result: 'README and submission draft contain the verified live URL; deployment
-    report records actual public and CI checks. Canvas follow-up is documented.
-    Actual human/team review is still required and has not been invented.'
+  result: 'Review fixes: readable number/unit spacing; 109 tests explicitly split
+    into 71 numerical/schema plus 38 API tests; Devpost placeholder removed without
+    inventing human review; actual overview and existing oxygen-scatter screenshots;
+    2:29 captioned video preview documented. Fixture JSON stayed byte-identical,
+    release checks and local links passed. Actual human/team review remains pending.'
 - id: H-08
   title: Reproducible public repo, submitted on Devpost
   points: '5 - Tool Documentation: fully reproducible code, posted publicly to GitHub'
